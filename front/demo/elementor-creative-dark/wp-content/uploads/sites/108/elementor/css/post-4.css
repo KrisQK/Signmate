@@ -1,0 +1,863 @@
+.elementor-kit-4 {
+    background-color: var( --e-global-color-el_color_9);
+    background-image: url(https://the7.io/elementor-creative-dark/wp-content/uploads/sites/108/2024/06/blurtop001-min.png);
+    --e-global-color-primary: #FF0000;
+    --e-global-color-secondary: #FF0000;
+    --e-global-color-text: #FF0000;
+    --e-global-color-accent: #FF0000;
+    --e-global-color-el_color_1_2: #00BA7F;
+    --e-global-color-el_color_1: #00DC93;
+    --e-global-color-el_color_1_4: #5CEABB;
+    --e-global-color-el_color_2_2: #6F4BD8;
+    --e-global-color-el_color_2: #845AFF;
+    --e-global-color-el_color_2_4: #AE92FF;
+    --e-global-color-el_color_7: #FFFFFF;
+    --e-global-color-el_color_7_1: #A1A4A5;
+    --e-global-color-el_color_7_2: #A1A4A5A1;
+    --e-global-color-el_color_9: #080E10;
+    --e-global-color-el_color_7_6: #192022;
+    --e-global-color-el_color_7_4: #FFFFFF33;
+    --e-global-color-el_hover_1: #6F4BD880;
+    --e-global-color-el_hover_2: #080E1080;
+    --e-global-color-el_cta_1: #5A3CB2;
+    --e-global-color-el_cta_2: #16045E;
+    --e-global-color-el_color_0: #FFFFFF;
+    --e-global-color-el_color_0_1: #FFFFFF80;
+    --e-global-color-el_color_underline_1: #FFFFFF54;
+    --e-global-typography-el_title_1-font-family: "Sora";
+    --e-global-typography-el_title_1-font-size: 45px;
+    --e-global-typography-el_title_1-font-weight: 400;
+    --e-global-typography-el_title_1-text-transform: none;
+    --e-global-typography-el_title_1-font-style: normal;
+    --e-global-typography-el_title_1-text-decoration: none;
+    --e-global-typography-el_title_1-line-height: 1.4em;
+    --e-global-typography-el_title_2-font-family: "Sora";
+    --e-global-typography-el_title_2-font-size: 37px;
+    --e-global-typography-el_title_2-font-weight: 400;
+    --e-global-typography-el_title_2-text-transform: none;
+    --e-global-typography-el_title_2-font-style: normal;
+    --e-global-typography-el_title_2-text-decoration: none;
+    --e-global-typography-el_title_2-line-height: 1.4em;
+    --e-global-typography-el_title_3-font-family: "Sora";
+    --e-global-typography-el_title_3-font-size: 30px;
+    --e-global-typography-el_title_3-font-weight: 400;
+    --e-global-typography-el_title_3-text-transform: none;
+    --e-global-typography-el_title_3-font-style: normal;
+    --e-global-typography-el_title_3-text-decoration: none;
+    --e-global-typography-el_title_3-line-height: 1.4em;
+    --e-global-typography-el_title_4-font-family: "Sora";
+    --e-global-typography-el_title_4-font-size: 25px;
+    --e-global-typography-el_title_4-font-weight: 400;
+    --e-global-typography-el_title_4-text-transform: none;
+    --e-global-typography-el_title_4-font-style: normal;
+    --e-global-typography-el_title_4-text-decoration: none;
+    --e-global-typography-el_title_4-line-height: 1.5em;
+    --e-global-typography-el_title_5-font-family: "Sora";
+    --e-global-typography-el_title_5-font-size: 21px;
+    --e-global-typography-el_title_5-font-weight: 400;
+    --e-global-typography-el_title_5-text-transform: none;
+    --e-global-typography-el_title_5-font-style: normal;
+    --e-global-typography-el_title_5-text-decoration: none;
+    --e-global-typography-el_title_5-line-height: 1.5em;
+    --e-global-typography-el_title_6-font-family: "Sora";
+    --e-global-typography-el_title_6-font-size: 18px;
+    --e-global-typography-el_title_6-font-weight: 400;
+    --e-global-typography-el_title_6-text-transform: none;
+    --e-global-typography-el_title_6-font-style: normal;
+    --e-global-typography-el_title_6-text-decoration: none;
+    --e-global-typography-el_title_6-line-height: 1.5em;
+    --e-global-typography-el_content_5-font-family: "Sora";
+    --e-global-typography-el_content_5-font-size: 20px;
+    --e-global-typography-el_content_5-font-weight: normal;
+    --e-global-typography-el_content_5-text-transform: none;
+    --e-global-typography-el_content_5-font-style: normal;
+    --e-global-typography-el_content_5-line-height: 1.8em;
+    --e-global-typography-el_content_4-font-family: "Sora";
+    --e-global-typography-el_content_4-font-size: 18px;
+    --e-global-typography-el_content_4-font-weight: normal;
+    --e-global-typography-el_content_4-text-transform: none;
+    --e-global-typography-el_content_4-font-style: normal;
+    --e-global-typography-el_content_4-text-decoration: none;
+    --e-global-typography-el_content_4-line-height: 1.8em;
+    --e-global-typography-el_content_1-font-family: "Sora";
+    --e-global-typography-el_content_1-font-size: 16px;
+    --e-global-typography-el_content_1-font-weight: normal;
+    --e-global-typography-el_content_1-text-transform: none;
+    --e-global-typography-el_content_1-font-style: normal;
+    --e-global-typography-el_content_1-text-decoration: none;
+    --e-global-typography-el_content_1-line-height: 1.8em;
+    --e-global-typography-el_content_2-font-family: "Sora";
+    --e-global-typography-el_content_2-font-size: 14px;
+    --e-global-typography-el_content_2-font-weight: normal;
+    --e-global-typography-el_content_2-text-transform: none;
+    --e-global-typography-el_content_2-font-style: normal;
+    --e-global-typography-el_content_2-text-decoration: none;
+    --e-global-typography-el_content_2-line-height: 1.7em;
+    --e-global-typography-el_content_3-font-family: "Sora";
+    --e-global-typography-el_content_3-font-size: 12px;
+    --e-global-typography-el_content_3-font-weight: normal;
+    --e-global-typography-el_content_3-text-transform: none;
+    --e-global-typography-el_content_3-font-style: normal;
+    --e-global-typography-el_content_3-text-decoration: none;
+    --e-global-typography-el_content_3-line-height: 1.6em;
+    --e-global-typography-el_list_1-font-family: "Sora";
+    --e-global-typography-el_list_1-font-size: 16px;
+    --e-global-typography-el_list_1-font-weight: 400;
+    --e-global-typography-el_list_1-text-transform: none;
+    --e-global-typography-el_list_1-font-style: normal;
+    --e-global-typography-el_list_1-text-decoration: none;
+    --e-global-typography-el_list_1-line-height: 1.4em;
+    --e-global-typography-el_list_1_2-font-family: "Sora";
+    --e-global-typography-el_list_1_2-font-size: 18px;
+    --e-global-typography-el_list_1_2-font-weight: 400;
+    --e-global-typography-el_list_1_2-text-transform: none;
+    --e-global-typography-el_list_1_2-font-style: normal;
+    --e-global-typography-el_list_1_2-text-decoration: none;
+    --e-global-typography-el_list_1_2-line-height: 1.4em;
+    --e-global-typography-el_quote_1-font-family: "Sora";
+    --e-global-typography-el_quote_1-font-size: 20px;
+    --e-global-typography-el_quote_1-font-weight: 300;
+    --e-global-typography-el_quote_1-text-transform: none;
+    --e-global-typography-el_quote_1-font-style: italic;
+    --e-global-typography-el_quote_1-text-decoration: none;
+    --e-global-typography-el_quote_1-line-height: 1.8em;
+    --e-global-typography-el_subtitle_4-font-family: "Sora";
+    --e-global-typography-el_subtitle_4-font-size: 19px;
+    --e-global-typography-el_subtitle_4-font-weight: 400;
+    --e-global-typography-el_subtitle_4-text-transform: uppercase;
+    --e-global-typography-el_subtitle_4-font-style: normal;
+    --e-global-typography-el_subtitle_4-text-decoration: none;
+    --e-global-typography-el_subtitle_4-line-height: 1.4em;
+    --e-global-typography-el_subtitle_4-letter-spacing: 0.2em;
+    --e-global-typography-el_subtitle_3-font-family: "Sora";
+    --e-global-typography-el_subtitle_3-font-size: 16px;
+    --e-global-typography-el_subtitle_3-text-transform: uppercase;
+    --e-global-typography-el_subtitle_3-font-style: normal;
+    --e-global-typography-el_subtitle_3-text-decoration: none;
+    --e-global-typography-el_subtitle_3-line-height: 1.4em;
+    --e-global-typography-el_subtitle_3-letter-spacing: 0.2em;
+    --e-global-typography-el_subtitle_2-font-family: "Sora";
+    --e-global-typography-el_subtitle_2-font-size: 14px;
+    --e-global-typography-el_subtitle_2-font-weight: 400;
+    --e-global-typography-el_subtitle_2-text-transform: uppercase;
+    --e-global-typography-el_subtitle_2-font-style: normal;
+    --e-global-typography-el_subtitle_2-text-decoration: none;
+    --e-global-typography-el_subtitle_2-line-height: 1.4em;
+    --e-global-typography-el_subtitle_2-letter-spacing: 0.2em;
+    --e-global-typography-el_subtitle_1-font-family: "Sora";
+    --e-global-typography-el_subtitle_1-font-size: 12px;
+    --e-global-typography-el_subtitle_1-font-weight: 400;
+    --e-global-typography-el_subtitle_1-text-transform: uppercase;
+    --e-global-typography-el_subtitle_1-font-style: normal;
+    --e-global-typography-el_subtitle_1-text-decoration: none;
+    --e-global-typography-el_subtitle_1-line-height: 1.4em;
+    --e-global-typography-el_subtitle_1-letter-spacing: 0.15em;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 2000px auto
+}
+
+.elementor-kit-4 e-page-transition {
+    background-color: #ffbc7d
+}
+
+#the7-body {
+    --the7-btn-bg: var( --e-global-color-el_color_1);
+    --the7-btn-hover-bg: var( --e-global-color-el_color_1_4);
+    --the7-accent-color: var( --e-global-color-el_color_1);
+    --the7-divider-color: var( --e-global-color-el_color_7_4);
+    --the7-content-boxes-bg: var( --e-global-color-el_color_7_6);
+    --the7-beautiful-spinner-color: var( --e-global-color-el_color_7_4);
+    --the7-anchor-scroll-offset: 90;
+    --the7-btn-color: var( --e-global-color-el_color_9);
+    --the7-btn-border-color: var( --e-global-color-el_color_1);
+    --the7-btn-hover-color: var( --e-global-color-el_color_9);
+    --the7-btn-border-hover-color: var( --e-global-color-el_color_1_4);
+    --the7-btn-s-font-size: 10px;
+    --the7-btn-s-padding: 2px 12px 2px 12px;
+    --the7-btn-s-min-height: 28px;
+    --the7-btn-s-border-radius: 100px 100px 100px 100px;
+    --the7-btn-s-icon-size: 14px;
+    --the7-btn-s-icon-gap: 6px;
+    --the7-btn-m-font-size: 12px;
+    --the7-btn-m-padding: 5px 15px 5px 15px;
+    --the7-btn-m-min-height: 34px;
+    --the7-btn-m-border-radius: 100px 100px 100px 100px;
+    --the7-btn-m-icon-size: 16px;
+    --the7-btn-m-icon-gap: 8px;
+    --the7-btn-l-font-size: 14px;
+    --the7-btn-l-padding: 8px 18px 8px 18px;
+    --the7-btn-l-min-height: 42px;
+    --the7-btn-l-border-radius: 100px 100px 100px 100px;
+    --the7-btn-l-icon-size: 18px;
+    --the7-btn-l-icon-gap: 10px;
+    --the7-btn-lg-font-size: 16px;
+    --the7-btn-lg-padding: 10px 24px 10px 24px;
+    --the7-btn-lg-min-height: 50px;
+    --the7-btn-lg-border-radius: 100px 100px 100px 100px;
+    --the7-btn-lg-icon-size: 20px;
+    --the7-btn-lg-icon-gap: 12px;
+    --the7-btn-xl-font-size: 18px;
+    --the7-btn-xl-padding: 10px 30px 10px 30px;
+    --the7-btn-xl-min-height: 60px;
+    --the7-btn-xl-border-radius: 100px 100px 100px 100px;
+    --the7-btn-xl-icon-size: 24px;
+    --the7-btn-xl-icon-gap: 14px;
+    --the7-top-input-padding: 2px;
+    --the7-right-input-padding: 10px;
+    --the7-bottom-input-padding: 2px;
+    --the7-left-input-padding: 10px;
+    --the7-input-height: 42px;
+    --the7-input-color: var( --e-global-color-el_color_9);
+    --the7-required-mark-color: var( --e-global-color-el_color_1);
+    --the7-input-bg-color: var( --e-global-color-el_color_0);
+    --the7-form-border: solid;
+    --the7-top-input-border-width: 0px;
+    --the7-right-input-border-width: 0px;
+    --the7-bottom-input-border-width: 0px;
+    --the7-left-input-border-width: 0px;
+    --the7-input-border-radius: 0px 0px 0px 0px;
+    --the7-input-border-radius-top: 0px;
+    --the7-input-border-radius-right: 0px;
+    --the7-input-border-radius-bottom: 0px;
+    --the7-input-border-radius-left: 0px;
+    --the7-input-border-color: var( --e-global-color-el_color_7_4);
+    --the7-form-placeholder-opacity: 0.33;
+    --the7-form-placeholder-opacity-focus: 0;
+    --the7-base-color: var( --e-global-color-el_color_7_1);
+    --the7-secondary-text-color: var( --e-global-color-el_color_7_2);
+    --the7-base-font-family: var( --e-global-typography-el_content_1-font-family), Sans-serif;
+    --the7-text-big-font-size: var( --e-global-typography-el_content_1-font-size);
+    --the7-text-small-font-size: var( --e-global-typography-el_content_1-font-size);
+    --the7-base-font-size: var( --e-global-typography-el_content_1-font-size);
+    --the7-base-font-weight: var( --e-global-typography-el_content_1-font-weight);
+    --the7-base-text-transform: var( --e-global-typography-el_content_1-text-transform);
+    --the7-base-font-style: var( --e-global-typography-el_content_1-font-style);
+    --the7-base-text-decoration: var( --e-global-typography-el_content_1-text-decoration);
+    --the7-text-big-line-height: var( --e-global-typography-el_content_1-line-height);
+    --the7-text-small-line-height: var( --e-global-typography-el_content_1-line-height);
+    --the7-base-line-height: var( --e-global-typography-el_content_1-line-height);
+    --the7-links-color: var( --e-global-color-el_color_1);
+    --the7-links-hover-color: var( --e-global-color-el_color_1_2);
+    --the7-title-color: var( --e-global-color-el_color_7);
+    --the7-h1-font-family: "Sora", Sans-serif;
+    --the7-h1-font-size: 45px;
+    --the7-h1-font-weight: 400;
+    --the7-h1-text-transform: none;
+    --the7-h1-font-style: normal;
+    --the7-h1-text-decoration: none;
+    --the7-h1-line-height: 1.4em;
+    --the7-h1-spacing: 30px;
+    --the7-h2-font-family: var( --e-global-typography-el_title_2-font-family), Sans-serif;
+    --the7-h2-font-size: var( --e-global-typography-el_title_2-font-size);
+    --the7-h2-font-weight: var( --e-global-typography-el_title_2-font-weight);
+    --the7-h2-text-transform: var( --e-global-typography-el_title_2-text-transform);
+    --the7-h2-font-style: var( --e-global-typography-el_title_2-font-style);
+    --the7-h2-text-decoration: var( --e-global-typography-el_title_2-text-decoration);
+    --the7-h2-line-height: var( --e-global-typography-el_title_2-line-height);
+    --the7-h2-spacing: 25px;
+    --the7-h3-font-family: var( --e-global-typography-el_title_3-font-family), Sans-serif;
+    --the7-h3-font-size: var( --e-global-typography-el_title_3-font-size);
+    --the7-h3-font-weight: var( --e-global-typography-el_title_3-font-weight);
+    --the7-h3-text-transform: var( --e-global-typography-el_title_3-text-transform);
+    --the7-h3-font-style: var( --e-global-typography-el_title_3-font-style);
+    --the7-h3-text-decoration: var( --e-global-typography-el_title_3-text-decoration);
+    --the7-h3-line-height: var( --e-global-typography-el_title_3-line-height);
+    --the7-h3-spacing: 20px;
+    --the7-h4-font-family: var( --e-global-typography-el_title_4-font-family), Sans-serif;
+    --the7-h4-font-size: var( --e-global-typography-el_title_4-font-size);
+    --the7-h4-font-weight: var( --e-global-typography-el_title_4-font-weight);
+    --the7-h4-text-transform: var( --e-global-typography-el_title_4-text-transform);
+    --the7-h4-font-style: var( --e-global-typography-el_title_4-font-style);
+    --the7-h4-text-decoration: var( --e-global-typography-el_title_4-text-decoration);
+    --the7-h4-line-height: var( --e-global-typography-el_title_4-line-height);
+    --the7-h4-spacing: 15px;
+    --the7-h5-font-family: var( --e-global-typography-el_title_5-font-family), Sans-serif;
+    --the7-h5-font-size: var( --e-global-typography-el_title_5-font-size);
+    --the7-h5-font-weight: var( --e-global-typography-el_title_5-font-weight);
+    --the7-h5-text-transform: var( --e-global-typography-el_title_5-text-transform);
+    --the7-h5-font-style: var( --e-global-typography-el_title_5-font-style);
+    --the7-h5-text-decoration: var( --e-global-typography-el_title_5-text-decoration);
+    --the7-h5-line-height: var( --e-global-typography-el_title_5-line-height);
+    --the7-h5-spacing: 15px;
+    --the7-h6-font-family: var( --e-global-typography-el_title_6-font-family), Sans-serif;
+    --the7-h6-font-size: var( --e-global-typography-el_title_6-font-size);
+    --the7-h6-font-weight: var( --e-global-typography-el_title_6-font-weight);
+    --the7-h6-text-transform: var( --e-global-typography-el_title_6-text-transform);
+    --the7-h6-font-style: var( --e-global-typography-el_title_6-font-style);
+    --the7-h6-text-decoration: var( --e-global-typography-el_title_6-text-decoration);
+    --the7-h6-line-height: var( --e-global-typography-el_title_6-line-height);
+    --the7-h6-spacing: 10px;
+    --the7-widget-title-font-family: var( --e-global-typography-el_title_5-font-family), Sans-serif;
+    --the7-widget-title-font-size: var( --e-global-typography-el_title_5-font-size);
+    --the7-widget-title-font-weight: var( --e-global-typography-el_title_5-font-weight);
+    --the7-widget-title-text-transform: var( --e-global-typography-el_title_5-text-transform);
+    --the7-widget-title-font-style: var( --e-global-typography-el_title_5-font-style);
+    --the7-widget-title-text-decoration: var( --e-global-typography-el_title_5-text-decoration);
+    --the7-widget-title-line-height: var( --e-global-typography-el_title_5-line-height);
+    --the7-widget-gap: 15px;
+    --the7-widget-content-font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    --the7-widget-content-font-size: var( --e-global-typography-el_content_2-font-size);
+    --the7-widget-content-font-weight: var( --e-global-typography-el_content_2-font-weight);
+    --the7-widget-content-text-transform: var( --e-global-typography-el_content_2-text-transform);
+    --the7-widget-content-font-style: var( --e-global-typography-el_content_2-font-style);
+    --the7-widget-content-text-decoration: var( --e-global-typography-el_content_2-text-decoration);
+    --the7-widget-content-line-height: var( --e-global-typography-el_content_2-line-height)
+}
+
+.elementor-section.elementor-section-boxed>.elementor-container {
+    max-width: 1300px
+}
+
+.e-con {
+    --container-max-width: 1300px;
+    --container-default-padding-top: 0px;
+    --container-default-padding-right: 60px;
+    --container-default-padding-bottom: 0px;
+    --container-default-padding-left: 60px
+}
+
+.elementor-widget:not(:last-child) {
+    margin-block-end: 100px
+}
+
+.elementor-element {
+    --widgets-spacing: 100px 60px
+}
+
+{}
+
+h1.entry-title {
+    display: var(--page-title-display)
+}
+
+.scroll-top-elementor-icon i,
+.scroll-top:before {
+    font-size: 24px
+}
+
+a.scroll-top-elementor-icon svg {
+    width: 24px;
+    height: 24px
+}
+
+#the7-body a.scroll-top {
+    padding: .5em;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100% 100% 100% 100%;
+    left: auto;
+    right: var(--the7-scroll-h-offset, 0);
+    transform: translate3d(0, 0, 0);
+    --the7-scroll-h-offset: 20px;
+    bottom: 20px
+}
+
+.scroll-top-elementor-icon i {
+    width: 1em;
+    height: 1em;
+    text-align: center
+}
+
+body .scroll-top-elementor-icon i,
+body .scroll-top:before {
+    color: var( --e-global-color-el_color_7)
+}
+
+body .scroll-top-elementor-icon svg {
+    fill: var( --e-global-color-el_color_7);
+    color: var( --e-global-color-el_color_7)
+}
+
+body .scroll-top {
+    background-color: var( --e-global-color-el_color_9);
+    border-color: var( --e-global-color-el_color_7_4)
+}
+
+body .scroll-top-elementor-icon:hover i,
+body .scroll-top:hover:before {
+    color: var( --e-global-color-el_color_1)
+}
+
+body .scroll-top-elementor-icon:hover svg {
+    fill: var( --e-global-color-el_color_1);
+    color: var( --e-global-color-el_color_1)
+}
+
+body .scroll-top:hover {
+    background-color: var( --e-global-color-el_color_9);
+    border-color: var( --e-global-color-el_color_1)
+}
+
+body {
+    --the7-btn-s-font-family: "Sora", Sans-serif;
+    --the7-btn-m-font-family: "Sora", Sans-serif;
+    --the7-btn-l-font-family: "Sora", Sans-serif;
+    --the7-btn-lg-font-family: "Sora", Sans-serif;
+    --the7-btn-xl-font-family: "Sora", Sans-serif;
+    --the7-btn-s-font-weight: 500;
+    --the7-btn-m-font-weight: 500;
+    --the7-btn-l-font-weight: 500;
+    --the7-btn-lg-font-weight: 500;
+    --the7-btn-xl-font-weight: 500;
+    --the7-btn-s-text-transform: none;
+    --the7-btn-m-text-transform: none;
+    --the7-btn-l-text-transform: none;
+    --the7-btn-lg-text-transform: none;
+    --the7-btn-xl-text-transform: none;
+    --the7-h1-font-family: "Sora", Sans-serif;
+    --the7-h2-font-family: "Sora", Sans-serif;
+    --the7-h3-font-family: "Sora", Sans-serif;
+    --the7-h4-font-family: "Sora", Sans-serif;
+    --the7-h5-font-family: "Sora", Sans-serif;
+    --the7-h6-font-family: "Sora", Sans-serif;
+    --the7-h1-font-weight: 400;
+    --the7-h2-font-weight: 400;
+    --the7-h3-font-weight: 400;
+    --the7-h4-font-weight: 400;
+    --the7-h5-font-weight: 400;
+    --the7-h6-font-weight: 400;
+    --the7-h1-line-height: 1.4em;
+    --the7-h2-line-height: 1.4em;
+    --the7-h3-line-height: 1.4em;
+    --the7-h4-line-height: 1.4em;
+    --the7-h5-line-height: 1.4em;
+    --the7-h6-line-height: 1.4em;
+    --the7-h1-letter-spacing: 0px;
+    --the7-h2-letter-spacing: 0px;
+    --the7-h3-letter-spacing: 0px;
+    --the7-h4-letter-spacing: 0px;
+    --the7-h5-letter-spacing: 0px;
+    --the7-h6-letter-spacing: 0px;
+    --the7-h1-word-spacing: 0em;
+    --the7-h2-word-spacing: 0em;
+    --the7-h3-word-spacing: 0em;
+    --the7-h4-word-spacing: 0em;
+    --the7-h5-word-spacing: 0em;
+    --the7-h6-word-spacing: 0em
+}
+
+body#the7-body {
+    --the7-form-xs-font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    --the7-form-sm-font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    --the7-form-md-font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    --the7-form-lg-font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    --the7-form-xl-font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    --the7-form-xs-font-weight: var( --e-global-typography-el_content_2-font-weight);
+    --the7-form-sm-font-weight: var( --e-global-typography-el_content_2-font-weight);
+    --the7-form-md-font-weight: var( --e-global-typography-el_content_2-font-weight);
+    --the7-form-lg-font-weight: var( --e-global-typography-el_content_2-font-weight);
+    --the7-form-xl-font-weight: var( --e-global-typography-el_content_2-font-weight);
+    --the7-form-xs-text-transform: var( --e-global-typography-el_content_2-text-transform);
+    --the7-form-sm-text-transform: var( --e-global-typography-el_content_2-text-transform);
+    --the7-form-md-text-transform: var( --e-global-typography-el_content_2-text-transform);
+    --the7-form-lg-text-transform: var( --e-global-typography-el_content_2-text-transform);
+    --the7-form-xl-text-transform: var( --e-global-typography-el_content_2-text-transform)
+}
+
+.elementor-field-group,
+.elementor-kit-4 .comment-form-cookies-consent,
+.elementor-kit-4 .comment-notes {
+    padding-right: calc( 40px/2);
+    padding-left: calc( 40px/2)
+}
+
+.elementor-form-fields-wrapper {
+    margin-left: calc( -40px/2);
+    margin-right: calc( -40px/2);
+    margin-bottom: -40px
+}
+
+.elementor-field-group {
+    margin-bottom: 40px
+}
+
+.elementor-field-group.recaptcha_v3-bottomleft,
+.elementor-kit-4 .elementor-field-group.recaptcha_v3-bottomright {
+    margin-bottom: 0
+}
+
+.elementor-mark-required .elementor-field-label:after,
+.woocommerce-Reviews .comment-form .required {
+    color: var( --e-global-color-el_color_1)
+}
+
+input[type=text]::placeholder,
+input[type=search]::placeholder,
+input[type=tel]::placeholder,
+input[type=url]::placeholder,
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=date]::placeholder,
+input[type=range]::placeholder,
+input[type=password]::placeholder,
+.elementor-field-group .elementor-field-textual::placeholder {
+    opacity: .33
+}
+
+input[type=text]:focus::placeholder,
+input[type=search]:focus::placeholder,
+input[type=tel]:focus::placeholder,
+input[type=url]:focus::placeholder,
+input[type=email]:focus::placeholder,
+input[type=number]:focus::placeholder,
+input[type=date]:focus::placeholder,
+input[type=range]:focus::placeholder,
+input[type=password]:focus::placeholder,
+.elementor-field-group .elementor-field-textual:focus::placeholder {
+    opacity: 0
+}
+
+.elementor-field-label,
+.elementor-field-subgroup label,
+.woocommerce-Reviews .elementor-field-group>label,
+.the7-elementor-product-comments .comment-form label {
+    font-family: var( --e-global-typography-el_subtitle_1-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_subtitle_1-font-size);
+    font-weight: var( --e-global-typography-el_subtitle_1-font-weight);
+    text-transform: var( --e-global-typography-el_subtitle_1-text-transform);
+    font-style: var( --e-global-typography-el_subtitle_1-font-style);
+    text-decoration: var( --e-global-typography-el_subtitle_1-text-decoration);
+    line-height: var( --e-global-typography-el_subtitle_1-line-height);
+    letter-spacing: var( --e-global-typography-el_subtitle_1-letter-spacing);
+    color: var( --e-global-color-el_color_7)
+}
+
+body.rtl .elementor-labels-inline .elementor-field-group>.elementor-field-label {
+    padding-left: 10px
+}
+
+body:not(.rtl) .elementor-labels-inline .elementor-field-group>.elementor-field-label {
+    padding-right: 10px
+}
+
+body .elementor-labels-above .elementor-field-group>.elementor-field-label {
+    padding-bottom: 10px
+}
+
+body .woocommerce-Reviews .elementor-field-group>label {
+    margin-bottom: 10px
+}
+
+.elementor-field-group .elementor-field-textual.elementor-size-xs,
+.content .elementor-field-group .elementor-field-textual.elementor-size-xs {
+    font-family: var( --e-global-typography-el_content_3-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_content_3-font-size);
+    font-weight: var( --e-global-typography-el_content_3-font-weight);
+    text-transform: var( --e-global-typography-el_content_3-text-transform);
+    font-style: var( --e-global-typography-el_content_3-font-style);
+    line-height: var( --e-global-typography-el_content_3-line-height);
+    padding: 2px 8px;
+    min-height: 28px
+}
+
+.elementor-field-group .elementor-field-textual.elementor-size-sm,
+.content .elementor-field-group .elementor-field-textual.elementor-size-sm {
+    font-family: var( --e-global-typography-el_content_3-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_content_3-font-size);
+    font-weight: var( --e-global-typography-el_content_3-font-weight);
+    text-transform: var( --e-global-typography-el_content_3-text-transform);
+    font-style: var( --e-global-typography-el_content_3-font-style);
+    line-height: var( --e-global-typography-el_content_3-line-height);
+    padding: 5px 10px;
+    min-height: 34px
+}
+
+.elementor-field-group .elementor-field-textual.elementor-size-md,
+.content .elementor-field-group .elementor-field-textual.elementor-size-md {
+    font-family: var( --e-global-typography-el_content_2-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_content_2-font-size);
+    font-weight: var( --e-global-typography-el_content_2-font-weight);
+    text-transform: var( --e-global-typography-el_content_2-text-transform);
+    font-style: var( --e-global-typography-el_content_2-font-style);
+    line-height: var( --e-global-typography-el_content_2-line-height);
+    padding: 7px 14px;
+    min-height: 42px
+}
+
+.elementor-field-group .elementor-field-textual.elementor-size-lg,
+.content .elementor-field-group .elementor-field-textual.elementor-size-lg {
+    font-family: var( --e-global-typography-el_content_1-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_content_1-font-size);
+    font-weight: var( --e-global-typography-el_content_1-font-weight);
+    text-transform: var( --e-global-typography-el_content_1-text-transform);
+    font-style: var( --e-global-typography-el_content_1-font-style);
+    line-height: var( --e-global-typography-el_content_1-line-height);
+    padding: 9px 18px;
+    min-height: 50px
+}
+
+.elementor-field-group .elementor-field-textual.elementor-size-xl,
+.content .elementor-field-group .elementor-field-textual.elementor-size-xl {
+    font-family: var( --e-global-typography-el_content_1-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_content_1-font-size);
+    font-weight: var( --e-global-typography-el_content_1-font-weight);
+    text-transform: var( --e-global-typography-el_content_1-text-transform);
+    font-style: var( --e-global-typography-el_content_1-font-style);
+    line-height: var( --e-global-typography-el_content_1-line-height);
+    padding: 10px 20px;
+    min-height: 60px
+}
+
+.elementor-widget-text-editor p,
+.elementor-tab-content p,
+.the7-e-tab-content.the7-e-tab-text-content p,
+.elementor-widget-woocommerce-product-content p,
+.elementor-widget-theme-post-content>.elementor-widget-container>p,
+#the7-body .elementor-widget-text-editor ul,
+#the7-body .elementor-tab-content ul,
+#the7-body .the7-e-tab-content.the7-e-tab-text-content ul,
+#the7-body .elementor-widget-woocommerce-product-content ul,
+#the7-body .elementor-widget-theme-post-content>.elementor-widget-container>ul,
+#the7-body .elementor-widget-text-editor ol,
+#the7-body .elementor-tab-content ol,
+#the7-body .the7-e-tab-content.the7-e-tab-text-content ol,
+#the7-body .elementor-widget-woocommerce-product-content ol,
+#the7-body .elementor-widget-theme-post-content>.elementor-widget-container>ol,
+.the7-elementor-product-comments #reviews .comment-text .description p,
+.elementor-widget-post-comments .comment-content p {
+    margin-bottom: 15px
+}
+
+:root {
+    --the7-p-spacing: 15px
+}
+
+.elementor-tab-content a,
+.the7-e-tab-content.the7-e-tab-text-content a,
+.box-description a,
+.e-hotspot__tooltip a,
+.e-inner-tab-content a,
+.elementor-widget-text-editor a,
+.comment-respond a {
+    text-decoration: underline
+}
+
+.elementor-tab-content a:hover,
+.the7-e-tab-content.the7-e-tab-text-content a:hover,
+.box-description a:hover,
+.e-hotspot__tooltip a:hover,
+.e-inner-tab-content a:hover,
+.elementor-widget-text-editor a:hover,
+.comment-respond a:hover {
+    text-decoration: none
+}
+
+a:hover {
+    color: var( --e-global-color-el_color_1_2)
+}
+
+@media(max-width:1300px) {
+    .e-con {
+        --container-default-padding-top: 0px;
+        --container-default-padding-right: 60px;
+        --container-default-padding-bottom: 0px;
+        --container-default-padding-left: 60px
+    }
+    .elementor-field-label,
+    .elementor-field-subgroup label,
+    .woocommerce-Reviews .elementor-field-group>label,
+    .the7-elementor-product-comments .comment-form label {
+        font-size: var( --e-global-typography-el_subtitle_1-font-size);
+        line-height: var( --e-global-typography-el_subtitle_1-line-height);
+        letter-spacing: var( --e-global-typography-el_subtitle_1-letter-spacing)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-xs,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-xs {
+        font-size: var( --e-global-typography-el_content_3-font-size);
+        line-height: var( --e-global-typography-el_content_3-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-sm,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-sm {
+        font-size: var( --e-global-typography-el_content_3-font-size);
+        line-height: var( --e-global-typography-el_content_3-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-md,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-md {
+        font-size: var( --e-global-typography-el_content_2-font-size);
+        line-height: var( --e-global-typography-el_content_2-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-lg,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-lg {
+        font-size: var( --e-global-typography-el_content_1-font-size);
+        line-height: var( --e-global-typography-el_content_1-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-xl,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-xl {
+        font-size: var( --e-global-typography-el_content_1-font-size);
+        line-height: var( --e-global-typography-el_content_1-line-height)
+    }
+    #the7-body {
+        --the7-text-big-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-text-small-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-base-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-text-big-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-text-small-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-base-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-h2-font-size: var( --e-global-typography-el_title_2-font-size);
+        --the7-h2-line-height: var( --e-global-typography-el_title_2-line-height);
+        --the7-h3-font-size: var( --e-global-typography-el_title_3-font-size);
+        --the7-h3-line-height: var( --e-global-typography-el_title_3-line-height);
+        --the7-h4-font-size: var( --e-global-typography-el_title_4-font-size);
+        --the7-h4-line-height: var( --e-global-typography-el_title_4-line-height);
+        --the7-h5-font-size: var( --e-global-typography-el_title_5-font-size);
+        --the7-h5-line-height: var( --e-global-typography-el_title_5-line-height);
+        --the7-h6-font-size: var( --e-global-typography-el_title_6-font-size);
+        --the7-h6-line-height: var( --e-global-typography-el_title_6-line-height);
+        --the7-widget-title-font-size: var( --e-global-typography-el_title_5-font-size);
+        --the7-widget-title-line-height: var( --e-global-typography-el_title_5-line-height);
+        --the7-widget-content-font-size: var( --e-global-typography-el_content_2-font-size);
+        --the7-widget-content-line-height: var( --e-global-typography-el_content_2-line-height)
+    }
+}
+
+@media(max-width:900px) {
+    .elementor-kit-4 {
+        --e-global-typography-el_title_1-font-size: 37px;
+        background-size: 1500px auto
+    }
+    .elementor-field-label,
+    .elementor-field-subgroup label,
+    .woocommerce-Reviews .elementor-field-group>label,
+    .the7-elementor-product-comments .comment-form label {
+        font-size: var( --e-global-typography-el_subtitle_1-font-size);
+        line-height: var( --e-global-typography-el_subtitle_1-line-height);
+        letter-spacing: var( --e-global-typography-el_subtitle_1-letter-spacing)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-xs,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-xs {
+        font-size: var( --e-global-typography-el_content_3-font-size);
+        line-height: var( --e-global-typography-el_content_3-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-sm,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-sm {
+        font-size: var( --e-global-typography-el_content_3-font-size);
+        line-height: var( --e-global-typography-el_content_3-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-md,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-md {
+        font-size: var( --e-global-typography-el_content_2-font-size);
+        line-height: var( --e-global-typography-el_content_2-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-lg,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-lg {
+        font-size: var( --e-global-typography-el_content_1-font-size);
+        line-height: var( --e-global-typography-el_content_1-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-xl,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-xl {
+        font-size: var( --e-global-typography-el_content_1-font-size);
+        line-height: var( --e-global-typography-el_content_1-line-height)
+    }
+    #the7-body {
+        --the7-text-big-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-text-small-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-base-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-text-big-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-text-small-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-base-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-h1-font-size: 37px;
+        --the7-h2-font-size: var( --e-global-typography-el_title_2-font-size);
+        --the7-h2-line-height: var( --e-global-typography-el_title_2-line-height);
+        --the7-h3-font-size: var( --e-global-typography-el_title_3-font-size);
+        --the7-h3-line-height: var( --e-global-typography-el_title_3-line-height);
+        --the7-h4-font-size: var( --e-global-typography-el_title_4-font-size);
+        --the7-h4-line-height: var( --e-global-typography-el_title_4-line-height);
+        --the7-h5-font-size: var( --e-global-typography-el_title_5-font-size);
+        --the7-h5-line-height: var( --e-global-typography-el_title_5-line-height);
+        --the7-h6-font-size: var( --e-global-typography-el_title_6-font-size);
+        --the7-h6-line-height: var( --e-global-typography-el_title_6-line-height);
+        --the7-widget-title-font-size: var( --e-global-typography-el_title_5-font-size);
+        --the7-widget-title-line-height: var( --e-global-typography-el_title_5-line-height);
+        --the7-widget-content-font-size: var( --e-global-typography-el_content_2-font-size);
+        --the7-widget-content-line-height: var( --e-global-typography-el_content_2-line-height)
+    }
+}
+
+@media(max-width:600px) {
+    .elementor-kit-4 {
+        --e-global-typography-el_title_1-font-size: 28px;
+        --e-global-typography-el_title_2-font-size: 26px;
+        --e-global-typography-el_title_3-font-size: 24px;
+        --e-global-typography-el_title_4-font-size: 22px;
+        --e-global-typography-el_title_5-font-size: 20px;
+        --e-global-typography-el_content_5-font-size: 18px;
+        --e-global-typography-el_quote_1-font-size: 16px;
+        --e-global-typography-el_subtitle_4-font-size: 16px;
+        --e-global-typography-el_subtitle_4-letter-spacing: 0.1em;
+        --e-global-typography-el_subtitle_3-font-size: 14px;
+        --e-global-typography-el_subtitle_3-letter-spacing: 0.1em;
+        --e-global-typography-el_subtitle_2-letter-spacing: 0.1em;
+        --e-global-typography-el_subtitle_1-letter-spacing: 0.1em;
+        background-size: 1000px auto
+    }
+    .e-con {
+        --container-default-padding-top: 0px;
+        --container-default-padding-right: 20px;
+        --container-default-padding-bottom: 0px;
+        --container-default-padding-left: 20px
+    }
+    #the7-body {
+        --the7-btn-xl-font-size: 16px;
+        --the7-btn-xl-padding: 10px 24px 10px 24px;
+        --the7-btn-xl-min-height: 50px;
+        --the7-btn-xl-icon-size: 20px;
+        --the7-btn-xl-icon-gap: 12px;
+        --the7-text-big-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-text-small-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-base-font-size: var( --e-global-typography-el_content_1-font-size);
+        --the7-text-big-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-text-small-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-base-line-height: var( --e-global-typography-el_content_1-line-height);
+        --the7-h1-font-size: 28px;
+        --the7-h2-font-size: var( --e-global-typography-el_title_2-font-size);
+        --the7-h2-line-height: var( --e-global-typography-el_title_2-line-height);
+        --the7-h3-font-size: var( --e-global-typography-el_title_3-font-size);
+        --the7-h3-line-height: var( --e-global-typography-el_title_3-line-height);
+        --the7-h4-font-size: var( --e-global-typography-el_title_4-font-size);
+        --the7-h4-line-height: var( --e-global-typography-el_title_4-line-height);
+        --the7-h5-font-size: var( --e-global-typography-el_title_5-font-size);
+        --the7-h5-line-height: var( --e-global-typography-el_title_5-line-height);
+        --the7-h6-font-size: var( --e-global-typography-el_title_6-font-size);
+        --the7-h6-line-height: var( --e-global-typography-el_title_6-line-height);
+        --the7-widget-title-font-size: var( --e-global-typography-el_title_5-font-size);
+        --the7-widget-title-line-height: var( --e-global-typography-el_title_5-line-height);
+        --the7-widget-content-font-size: var( --e-global-typography-el_content_2-font-size);
+        --the7-widget-content-line-height: var( --e-global-typography-el_content_2-line-height)
+    }
+    .elementor-field-label,
+    .elementor-field-subgroup label,
+    .woocommerce-Reviews .elementor-field-group>label,
+    .the7-elementor-product-comments .comment-form label {
+        font-size: var( --e-global-typography-el_subtitle_1-font-size);
+        line-height: var( --e-global-typography-el_subtitle_1-line-height);
+        letter-spacing: var( --e-global-typography-el_subtitle_1-letter-spacing)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-xs,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-xs {
+        font-size: var( --e-global-typography-el_content_3-font-size);
+        line-height: var( --e-global-typography-el_content_3-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-sm,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-sm {
+        font-size: var( --e-global-typography-el_content_3-font-size);
+        line-height: var( --e-global-typography-el_content_3-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-md,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-md {
+        font-size: var( --e-global-typography-el_content_2-font-size);
+        line-height: var( --e-global-typography-el_content_2-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-lg,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-lg {
+        font-size: var( --e-global-typography-el_content_1-font-size);
+        line-height: var( --e-global-typography-el_content_1-line-height)
+    }
+    .elementor-field-group .elementor-field-textual.elementor-size-xl,
+    .content .elementor-field-group .elementor-field-textual.elementor-size-xl {
+        font-size: var( --e-global-typography-el_content_1-font-size);
+        line-height: var( --e-global-typography-el_content_1-line-height)
+    }
+}

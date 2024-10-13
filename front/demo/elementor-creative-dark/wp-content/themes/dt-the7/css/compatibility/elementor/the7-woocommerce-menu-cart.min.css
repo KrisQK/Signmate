@@ -1,0 +1,90 @@
+.elementor-widget-the7-woocommerce-menu-cart {
+    text-align: var(--main-alignment, left)
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .elementor-widget-container {
+    line-height: 0
+}
+
+.dt-menu-cart__toggle {
+    position: relative;
+    display: inline-flex;
+    transition: all .3s
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .dt-menu-cart__toggle_button {
+    background-color: transparent;
+    border-style: var(--toggle-button-border-type, solid);
+    border-width: var(--toggle-button-border-width, 0px);
+    border-color: #818a91;
+    border-radius: var(--toggle-button-border-radius, 0px);
+    display: inline-flex;
+    align-items: center;
+    padding: var(--toggle-icon-padding, 0px 0px);
+    transition: all .3s
+}
+
+.dt-menu-cart__toggle:hover .dt-menu-cart__toggle_button {
+    background-color: var(--toggle-button-hover-background-color, var(--toggle-button-background-color));
+    border-color: var(--toggle-button-hover-border-color, var(--toggle-button-border-color, #818a91))
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .dt-cart-content {
+    display: flex;
+    align-items: center;
+    column-gap: 5px
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .dt-cart-title {
+    display: var(--title-display, inline-flex)
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .dt-cart-subtotal {
+    display: var(--subtotal-display, inline-flex)
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .dt-cart-indicator,
+.elementor-widget-the7-woocommerce-menu-cart .dt-cart-subtotal {
+    transition: all .3s
+}
+
+.dt-menu-cart__toggle .dt-button-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    order: var(--icon-order, 0)
+}
+
+.dt-menu-cart__toggle .dt-button-icon .elementor-icon {
+    transition: all .3s;
+    font-size: var(--toggle-icon-size, inherit)
+}
+
+.dt-menu-cart__toggle .dt-button-icon .elementor-icon svg {
+    height: auto;
+    width: var(--toggle-icon-size, 1em);
+    transition: all .3s
+}
+
+.elementor-widget-the7-woocommerce-menu-cart .dt-cart-indicator,
+.elementor-widget-the7-woocommerce-menu-cart [data-counter]:before {
+    display: var(--indicator-display, inline-flex)
+}
+
+.dt-menu-cart--items-indicator-bubble .dt-menu-cart__toggle [data-counter]:before {
+    content: attr(data-counter);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    min-width: 1.6em;
+    height: 1.6em;
+    line-height: 1.5em;
+    top: -.7em;
+    background: var(--the7-accent-color);
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 10px;
+    transition: all .3s
+}

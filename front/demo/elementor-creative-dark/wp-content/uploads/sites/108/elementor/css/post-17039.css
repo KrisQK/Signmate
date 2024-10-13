@@ -1,0 +1,137 @@
+.elementor-17039 .elementor-element.elementor-element-36d49e3e {
+    --display: flex;
+    --flex-direction: column;
+    --container-widget-width: 100%;
+    --container-widget-height: initial;
+    --container-widget-flex-grow: 0;
+    --container-widget-align-self: initial;
+    --flex-wrap-mobile: wrap;
+    --gap: 30px 30px;
+    --background-transition: 0.3s;
+    --padding-top: 60px;
+    --padding-bottom: 60px;
+    --padding-left: 60px;
+    --padding-right: 60px
+}
+
+.elementor-17039 .elementor-element.elementor-element-929455f.elementor-element {
+    --align-self: center
+}
+
+.elementor-17039 .elementor-element.elementor-element-929455f {
+    text-align: center
+}
+
+.elementor-17039 .elementor-element.elementor-element-929455f .the7-heading-title {
+    text-decoration-style: solid
+}
+
+.elementor-17039 .elementor-element.elementor-element-90d64a6 {
+    text-align: center;
+    color: var( --e-global-color-el_color_7_1);
+    --textColor: var( --e-global-color-el_color_7_1);
+    font-family: var( --e-global-typography-el_content_4-font-family), Sans-serif;
+    font-size: var( --e-global-typography-el_content_4-font-size);
+    font-weight: var( --e-global-typography-el_content_4-font-weight);
+    text-transform: var( --e-global-typography-el_content_4-text-transform);
+    font-style: var( --e-global-typography-el_content_4-font-style);
+    text-decoration: var( --e-global-typography-el_content_4-text-decoration);
+    line-height: var( --e-global-typography-el_content_4-line-height)
+}
+
+.elementor-17039 .elementor-element.elementor-element-c81c9c8>.elementor-widget-container {
+    margin: 30px 0 0
+}
+
+.elementor-17039 .elementor-element.elementor-element-c81c9c8 .elementor-field-type-html {
+    padding-bottom: 0
+}
+
+.elementor-17039 .elementor-element.elementor-element-c81c9c8 {
+    --e-form-steps-indicators-spacing: 20px;
+    --e-form-steps-indicator-padding: 30px;
+    --e-form-steps-indicator-inactive-secondary-color: #ffffff;
+    --e-form-steps-indicator-active-secondary-color: #ffffff;
+    --e-form-steps-indicator-completed-secondary-color: #ffffff;
+    --e-form-steps-divider-width: 1px;
+    --e-form-steps-divider-gap: 10px
+}
+
+#elementor-popup-modal-17039 .dialog-widget-content {
+    animation-duration: .4s;
+    background-color: var( --e-global-color-el_color_9);
+    width: 650px;
+    border-radius: 40px 0 40px 0;
+    box-shadow: 0 0 60px 30px #845aff
+}
+
+#elementor-popup-modal-17039 {
+    background-color: #000000c2;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all
+}
+
+#elementor-popup-modal-17039 .dialog-message {
+    width: 650px;
+    height: auto;
+    max-height: 85vh;
+    --scrollbar-thumb-color: var( --e-global-color-el_color_7_4);
+    --scrollbar-thumb-hover-color: var( --e-global-color-el_color_7_2)
+}
+
+#elementor-popup-modal-17039 .dialog-close-button {
+    display: flex;
+    top: 15px;
+    background-color: #00000000;
+    font-size: 24px
+}
+
+body:not(.rtl) #elementor-popup-modal-17039 .dialog-close-button {
+    right: 15px
+}
+
+body.rtl #elementor-popup-modal-17039 .dialog-close-button {
+    left: 15px
+}
+
+#elementor-popup-modal-17039 .dialog-close-button i {
+    color: var( --e-global-color-el_color_7_2)
+}
+
+#elementor-popup-modal-17039 .dialog-close-button svg {
+    fill: var( --e-global-color-el_color_7_2)
+}
+
+@media(max-width:1300px) {
+    .elementor-17039 .elementor-element.elementor-element-90d64a6 {
+        font-size: var( --e-global-typography-el_content_4-font-size);
+        line-height: var( --e-global-typography-el_content_4-line-height)
+    }
+}
+
+@media(max-width:900px) {
+    .elementor-17039 .elementor-element.elementor-element-36d49e3e {
+        --padding-top: 60px;
+        --padding-bottom: 60px;
+        --padding-left: 40px;
+        --padding-right: 40px
+    }
+    .elementor-17039 .elementor-element.elementor-element-90d64a6 {
+        font-size: var( --e-global-typography-el_content_4-font-size);
+        line-height: var( --e-global-typography-el_content_4-line-height)
+    }
+    #elementor-popup-modal-17039 .dialog-message {
+        width: 90vw
+    }
+    #elementor-popup-modal-17039 .dialog-widget-content {
+        width: 90vw
+    }
+}
+
+@media(max-width:600px) {
+    .elementor-17039 .elementor-element.elementor-element-90d64a6 {
+        font-size: var( --e-global-typography-el_content_4-font-size);
+        line-height: var( --e-global-typography-el_content_4-line-height)
+    }
+}

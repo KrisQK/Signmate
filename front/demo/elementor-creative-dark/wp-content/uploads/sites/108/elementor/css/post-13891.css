@@ -1,0 +1,91 @@
+.elementor-13891 .elementor-element.elementor-element-710e51f {
+    --display: flex;
+    --flex-direction: row;
+    --container-widget-width: initial;
+    --container-widget-height: 100%;
+    --container-widget-flex-grow: 1;
+    --container-widget-align-self: stretch;
+    --flex-wrap-mobile: wrap;
+    --justify-content: space-between;
+    --gap: 40px 40px;
+    --background-transition: 0.3s;
+    --padding-top: 60px;
+    --padding-bottom: 60px;
+    --padding-left: 60px;
+    --padding-right: 60px
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6 .sGrid-container {
+    --grid-columns: 4;
+    --grid-column-gap: 60px;
+    --grid-row-gap: 60px
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6 {
+    width: 100%;
+    max-width: 100%
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6>.elementor-widget-container {
+    padding: 0
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6 .filter {
+    --filter-display: none;
+    justify-content: center;
+    --filter-top-gap: 0px;
+    --filter-right-gap: 0px;
+    --filter-bottom-gap: 30px;
+    --filter-left-gap: 0px
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6 .filter .filter-categories {
+    justify-content: center;
+    --filter-column-gap: 30px;
+    --filter-row-gap: 30px
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6 .filter .filter-extras {
+    justify-content: center
+}
+
+.elementor-13891 .elementor-element.elementor-element-79065d6 .the7-elementor-widget>.paginator {
+    justify-content: center;
+    --paginator-column-gap: 30px;
+    --paginator-row-gap: 30px
+}
+
+.elementor-13891>.elementor-section-wrap,
+.elementor-13891>.elementor-inner>.elementor-section-wrap {
+    background: var( --e-global-color-el_color_9);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var( --e-global-color-el_color_7_4);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15)
+}
+
+@media(max-width:1200px) {
+    .elementor-13891 .elementor-element.elementor-element-79065d6 .sGrid-container {
+        --grid-columns: 2
+    }
+}
+
+@media(max-width:900px) {
+    .elementor-13891 .elementor-element.elementor-element-710e51f {
+        --flex-direction: column;
+        --container-widget-width: 100%;
+        --container-widget-height: initial;
+        --container-widget-flex-grow: 0;
+        --container-widget-align-self: initial;
+        --flex-wrap-mobile: wrap
+    }
+    .elementor-13891 .elementor-element.elementor-element-79065d6 .sGrid-container {
+        --grid-columns: 2
+    }
+}
+
+@media(max-width:600px) {
+    .elementor-13891 .elementor-element.elementor-element-79065d6 .sGrid-container {
+        --grid-columns: 1
+    }
+}

@@ -1,0 +1,27 @@
+.the7-icon-wrapper {
+    line-height: 0
+}
+
+.the7-icon-wrapper .elementor-icon {
+    font-size: 32px;
+    border-color: var(--the7-accent-color)
+}
+
+.the7-icon-wrapper .elementor-icon i {
+    transition: color .3s ease
+}
+
+.the7-icon-wrapper .elementor-icon svg {
+    transition: all .3s ease
+}
+
+.the7-icon-wrapper i {
+    color: var(--the7-accent-color)
+}
+
+.the7-icon-wrapper svg {
+    fill: var(--the7-accent-color);
+    color: var(--the7-accent-color);
+    height: auto;
+    align-self: center
+}
