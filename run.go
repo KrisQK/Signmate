@@ -1,66 +1,72 @@
 package main
 
 import (
-	"embed"
+	"errors"
+	"fmt"
 	"github.com/gin-gonic/gin"
-	"html/template"
+	"github.com/glebarez/sqlite"
+	"gorm.io/gorm"
 	"io/fs"
-	"net/http"
+	"path/filepath"
+	"strings"
 )
 
-//go:embed front/*
-var HtmlDir embed.FS
+var r *gin.Engine
+var db *gorm.DB
 
-//go:embed front/assets/**/*
-var AssetDir embed.FS
+type User struct {
+	gorm.Model
+	Username string `gorm:"type:varchar(64);not null"`
+	Password string `gorm:"type:varchar(64);not null"`
+	Token    string `gorm:"type:varchar(64)"`
+}
 
 func main() {
+	r = gin.Default()
 
-	r := gin.Default()
+	Template()
+	Database()
 
-	// embed files
-	tmpl := template.New("")
-	tmpl = template.Must(tmpl.ParseFS(HtmlDir, "front/*.html"))
-	r.SetHTMLTemplate(tmpl)
+	r.GET("/:any", func(c *gin.Context) {
+		if strings.HasSuffix(c.Param("any"), ".html") {
+			c.HTML(200, c.Param("any"), gin.H{})
+			return
+		}
 
-	assfs, _ := fs.Sub(AssetDir, "front/assets")
-	r.StaticFS("assets", http.FS(assfs))
-
-	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
-	})
-
-	r.GET("/index.html", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
-	})
-
-	r.GET("/about.html", func(c *gin.Context) {
-		c.HTML(200, "about.html", gin.H{})
-	})
-
-	r.GET("/service.html", func(c *gin.Context) {
-		c.HTML(200, "service.html", gin.H{})
-	})
-
-	r.GET("/review.html", func(c *gin.Context) {
-		c.HTML(200, "review.html", gin.H{})
-	})
-	r.GET("/project.html", func(c *gin.Context) {
-		c.HTML(200, "project.html", gin.H{})
-	})
-	r.GET("/contact.html", func(c *gin.Context) {
-		c.HTML(200, "contact.html", gin.H{})
-	})
-	r.GET("/blog.html", func(c *gin.Context) {
-		c.HTML(200, "blog.html", gin.H{})
-	})
-	r.GET("/faq.html", func(c *gin.Context) {
-		c.HTML(200, "faq.html", gin.H{})
-	})
-
-	r.NoRoute(func(c *gin.Context) {
-		c.HTML(200, "404.html", gin.H{})
+		c.HTML(404, "404.html", gin.H{})
 	})
 
 	r.Run("0.0.0.0:80")
+}
+
+func Template() {
+	var files []string
+	filepath.Walk("./front", func(path string, info fs.FileInfo, err error) error {
+		if strings.HasSuffix(path, ".html") {
+			files = append(files, path)
+		}
+		return nil
+	})
+
+	r.LoadHTMLFiles(files...)
+
+	r.Static("/assets", "./front/assets")
+}
+
+func Database() {
+	var err error
+	db, err = gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	if err != nil {
+		panic("Failed to connect database")
+	}
+
+	err = db.AutoMigrate(&User{})
+	if err != nil {
+		panic("Failed to migrate database")
+	}
+
+	if res := db.First(&User{}); errors.Is(res.Error, gorm.ErrRecordNotFound) {
+		db.Create(&User{Username: "admin", Password: "123456"})
+		fmt.Println("Created admin account")
+	}
 }

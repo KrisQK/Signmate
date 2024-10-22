@@ -1,0 +1,35 @@
+{{ define "admin/login.html" }}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+</head>
+<body>
+<h1>用户登录</h1>
+<form action="/login" method="POST">
+    <label for="username">用户名:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button type="submit">登录</button>
+</form>
+<!-- 错误信息展示 -->
+{{ if .error }}
+<p style="color:red">{{ .error }}</p>
+{{ end }}
+<!-- 成功信息展示 -->
+{{ if .success }}
+<p style="color:red">{{ .success }}</p>
+<script>
+    setTimeout(function () {
+        window.location.href='/admin';
+    })
+</script>
+{{ end }}
+</body>
+</html>
+
+{{ end }}
