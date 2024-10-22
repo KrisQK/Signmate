@@ -31,6 +31,48 @@ func main() {
 		c.HTML(200, "index.html", gin.H{})
 	})
 
+	r.GET("/project", func(c *gin.Context) {
+		var names []string
+		root := "front/dynamic"
+		filepath.Walk(root, func(path string, info fs.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+
+			if path == root {
+				return nil
+			}
+
+			if info.IsDir() {
+				names = append(names, info.Name())
+			}
+
+			return nil
+		})
+
+		c.JSON(200, gin.H{"names": names})
+	})
+
+	r.GET("/project/:name", func(c *gin.Context) {
+		var paths []string
+		root := "front/dynamic/" + c.Param("name")
+		filepath.Walk(root, func(path string, info fs.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+
+			if path == root {
+				return nil
+			}
+
+			paths = append(paths, path)
+
+			return nil
+		})
+
+		c.JSON(200, gin.H{"paths": paths})
+	})
+
 	r.GET("/:any", func(c *gin.Context) {
 		if strings.HasSuffix(c.Param("any"), ".html") {
 			c.HTML(200, c.Param("any"), gin.H{})
@@ -45,7 +87,7 @@ func main() {
 
 func Template() {
 	var files []string
-	filepath.Walk("./front", func(path string, info fs.FileInfo, err error) error {
+	filepath.Walk("front", func(path string, info fs.FileInfo, err error) error {
 		if strings.HasSuffix(path, "html") {
 			files = append(files, path)
 		}
