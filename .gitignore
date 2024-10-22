@@ -2,3 +2,5 @@
 .idea
 
 go.sum
+
+deploy.sh

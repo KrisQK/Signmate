@@ -27,6 +27,10 @@ func main() {
 	Template()
 	Database()
 
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(200, "index.html", gin.H{})
+	})
+
 	r.GET("/:any", func(c *gin.Context) {
 		if strings.HasSuffix(c.Param("any"), ".html") {
 			c.HTML(200, c.Param("any"), gin.H{})
@@ -36,13 +40,13 @@ func main() {
 		c.HTML(404, "404.html", gin.H{})
 	})
 
-	r.Run("0.0.0.0:80")
+	r.Run("0.0.0.0:8880")
 }
 
 func Template() {
 	var files []string
 	filepath.Walk("./front", func(path string, info fs.FileInfo, err error) error {
-		if strings.HasSuffix(path, ".html") {
+		if strings.HasSuffix(path, "html") {
 			files = append(files, path)
 		}
 		return nil
