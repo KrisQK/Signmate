@@ -59,7 +59,8 @@ body {
     font-size: 16px;
     line-height: 1.75em;
     font-weight: 400;
-    background: #101010;
+    /*background: #101010;*/
+    background: white;
 }
 img {
     width: 100%;
@@ -980,7 +981,7 @@ ul.disc.disc li:before {
     display: flex;
     align-items: center;
     z-index: 5;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 .navbar .navbar-right .wrap .icon {
     position: relative;
@@ -2650,6 +2651,7 @@ ul.disc.disc li:before {
 /* ======= Works style ======= */
 .works {
     overflow: hidden;
+    background-color: #f1cb0b;
 }
 .works .item {
     margin-bottom: 25px;
@@ -2823,7 +2825,7 @@ ul.disc.disc li:before {
     position: relative;
 }
 .services .item {
-    background: #1b1b1b;
+    background: #f1cb0b;;
     padding: 60px 40px;
     -webkit-transition: .5s;
     transition: .5s;
@@ -2851,26 +2853,26 @@ ul.disc.disc li:before {
 }
 .services .item h5 {
     font-size: 24px;
-    color: #fff;
+    color: #000000;
 }
 .services .item.active h5 {
-    color: #fff
+    color: #000000;
 }
 .services .item:hover h5 {
-    color: #fff;
+    color: #000000;
     -webkit-transition: .5s;
     transition: .5s;
 }
 .services .item p {
-    color: #ccc;
+    color: #000000;
     font-size: 16px;
     font-weight: 400;
 }
 .services .item.active p {
-    color: #fff;
+    color: #000000;
 }
 .services .item:hover p {
-    color: #fff;
+    color: #000000;
 }
 .services .item i {
     font-size: 60px;
@@ -3329,7 +3331,7 @@ ul.disc.disc li:before {
 }
 .accordion-box .block {
     position: relative;
-    background: #1b1b1b;
+    background: #f1cb0d;
     overflow: hidden;
     margin-bottom: 15px;
 }
@@ -3345,7 +3347,7 @@ ul.disc.disc li:before {
     cursor: pointer;
     padding: 30px;
     padding-right: 60px;
-    color: #fff;
+    color: #000000;
     transition: all 500ms ease;
     font-family: 'Poppins', sans-serif;
 }
@@ -3357,7 +3359,7 @@ ul.disc.disc li:before {
     font-size: 18px;
 }
 .accordion-box .block .acc-btn.active .count {
-    color: #fff;
+    color: #000000;
 }
 .accordion-box .block .acc-btn:before {
     position: absolute;
@@ -3374,10 +3376,10 @@ ul.disc.disc li:before {
 }
 .accordion-box .block .acc-btn.active {
     background-color: #dc2751;
-    color: #fff;
+    color: #000000;
 }
 .accordion-box .block .acc-btn.active:before {
-  color: #fff;
+  color: #000000;
   font-family: "Font Awesome 6 Pro";
   content: "\f106";
 }
@@ -3398,7 +3400,7 @@ ul.disc.disc li:before {
   display: block;
   position: relative;
   top: 0px;
-  color: #ccc;
+  color: #000000;
 }
 
 
@@ -3448,6 +3450,7 @@ ul.disc.disc li:before {
 /* ======= Testimonials style ======= */
 .testimonials {
     position: relative;
+    background-color: #f1cb0d;
 }
 .testimonials .item {
     position: relative;

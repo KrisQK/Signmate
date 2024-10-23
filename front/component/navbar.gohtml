@@ -1,0 +1,43 @@
+{{ define "component/navbar" }}
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <!-- <a class="logo" href="index.html"> <img src="assets/images/logo-light.png" class="logo-img" alt=""> </a> -->
+              <a href="index.html" class="logo"><h2>Signmate<span>.</span></h2></a>
+        </div>
+               <!-- Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa-regular fa-bars"></i></span> </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="works.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://m8fitout.com/">
+                        <div class="wrap">
+                            <img class="icon" style="height: 32px; width: 52px;" src="assets/images/Artboard.webp" alt="">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- Call -->
+            <div class="navbar-right">
+                <div class="wrap">
+                    <div class="icon"> <i class="fa-solid fa-phone"></i> </div>
+                    <div class="text">
+                        <p>Call Us Today</p>
+                        <h5><a href="tel:10000000000">000 000 0000</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{{ end }}
