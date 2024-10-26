@@ -2166,7 +2166,7 @@ ul.disc.disc li:before {
     top: -6%;
     bottom: 60%;
     left: -3%;
-    background-image: url(../img/dots.png);
+    /*background-image: url(../images/dots.png);*/
     background-repeat: repeat;
     z-index: -1;
 }

@@ -11,66 +11,29 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
+
+                    {{ range $k,$v := .testimonial }}
+
                     <div class="item"> <span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                        <p>Dan entesque magna magna semper daibus elisan the aliuen risus morbi tristique senectus et netus malesuan fames ac urpis miss muris in the sero dictum aselusion lacustion suscipit congue the volutpat.</p>
+                        <p>{{ $v }}</p>
                         <div class="info">
-                            <div class="author-img img-grayscale"> <img src="assets/images/team/02.jpg" alt=""> </div>
-                            <div class="cont">
-                                <h6>Emily Brown</h6> <span>HLL Company</span>
-                            </div>
+                            <!-- <div class="author-img img-grayscale"> <img src="assets/images/team/02.jpg" alt=""> </div> -->
+                            <!--<div class="cont"> -->
+                                <!--<h6></h6> <span></span> -->
+                                <h6>{{ $k }} </h6>
+                            <!--</div> -->
                         </div>
                     </div>
-                    <div class="item"> <span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                        <p>Dan entesque magna magna semper daibus elisan the aliuen risus morbi tristique senectus et netus malesuan fames ac urpis miss muris in the sero dictum aselusion lacustion suscipit congue the volutpat.</p>
-                        <div class="info">
-                            <div class="author-img img-grayscale"> <img src="assets/images/team/01.jpg" alt=""> </div>
-                            <div class="cont">
-                                <h6>Martin Brown</h6> <span>Consulting</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item"> <span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                        <p>Dan entesque magna magna semper daibus elisan the aliuen risus morbi tristique senectus et netus malesuan fames ac urpis miss muris in the sero dictum aselusion lacustion suscipit congue the volutpat.</p>
-                        <div class="info">
-                            <div class="author-img img-grayscale"> <img src="assets/images/team/03.jpg" alt=""> </div>
-                            <div class="cont">
-                                <h6>Enrico White</h6> <span>Lawyer Company</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item"> <span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                        <p>Dan entesque magna magna semper daibus elisan the aliuen risus morbi tristique senectus et netus malesuan fames ac urpis miss muris in the sero dictum aselusion lacustion suscipit congue the volutpat.</p>
-                        <div class="info">
-                            <div class="author-img img-grayscale"> <img src="assets/images/team/04.jpg" alt=""> </div>
-                            <div class="cont">
-                                <h6>Jesica Brown</h6> <span>Makeup Artist</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item"> <span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                        <p>Dan entesque magna magna semper daibus elisan the aliuen risus morbi tristique senectus et netus malesuan fames ac urpis miss muris in the sero dictum aselusion lacustion suscipit congue the volutpat.</p>
-                        <div class="info">
-                            <div class="author-img img-grayscale"> <img src="assets/images/team/05.jpg" alt=""> </div>
-                            <div class="cont">
-                                <h6>Rana Brown</h6> <span>Construction Co.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item"> <span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                        <p>Dan entesque magna magna semper daibus elisan the aliuen risus morbi tristique senectus et netus malesuan fames ac urpis miss muris in the sero dictum aselusion lacustion suscipit congue the volutpat.</p>
-                        <div class="info">
-                            <div class="author-img img-grayscale"> <img src="assets/images/team/06.jpg" alt=""> </div>
-                            <div class="cont">
-                                <h6>Olivia Martin</h6> <span>Model Artist</span>
-                            </div>
-                        </div>
-                    </div>
+
+                    {{ end }}
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 {{ end }}
