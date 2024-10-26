@@ -12,13 +12,25 @@
 
 {{ template "component/navbar" . }}
 
-{{ template "component/slider" . }}
+<!-- Header Banner -->
+<section class="banner-header section-padding bg-img bg-fixed bg-img-position-top" data-overlay-dark="5" data-background="assets/images/slider/2.jpg">
+    <div class="v-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mt-60">
+                    <h1>Services</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<style>
-    .header {
-        height: 100px;
-    }
-</style>
+<!-- divider line -->
+<div class="line-vr-section"></div>
 
 {{ template "component/service" . }}
 

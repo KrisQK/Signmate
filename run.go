@@ -58,6 +58,24 @@ func main() {
 		})
 	})
 
+	r.GET("/gallery.html", func(c *gin.Context) {
+		c.JSON(200, gin.H{"1": "未完成"})
+	})
+
+	r.GET("/contact.html", func(c *gin.Context) {
+		c.HTML(200, "contact.html", gin.H{})
+	})
+
+	r.POST("/api/contact", func(c *gin.Context) {
+		name := c.PostForm("name")
+		email := c.PostForm("email")
+		phone := c.PostForm("phone")
+		subject := c.PostForm("subject")
+		message := c.PostForm("message")
+		fmt.Println(name, email, phone, subject, message)
+		c.String(200, "Submit Success! We will contact u soon!")
+	})
+
 	r.GET("/project", func(c *gin.Context) {
 		var names []string
 		root := "front/dynamic"

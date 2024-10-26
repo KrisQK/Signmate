@@ -1,36 +1,3 @@
-/* ----------------------------------------------------------------
-
-[ Custom settings ]
-�������أ�Http://www.bootstrapmb.com
-01. ScrollIt
-02. Preloader
-03. Navbar scrolling background
-04. Close navbar-collapse when a clicked
-05. Sections background image from data background
-06. Slider-Fade owlCarousel
-07. Works owlCarousel
-08. Services owlCarousel
-09. Gallery owlCarousel
-10. Blog owlCarousel 
-11. Team owlCarousel 
-12. Clients owlCarousel
-13. Testimonials owlCarousel
-14. MagnificPopup
-15. Accordion
-16. Isotope Active Masonry Gallery
-17. Animations
-18. YouTubePopUp
-19. Parallaxie
-20. Tooltip
-21. Wow Animated
-22. Splitting Text
-23. Reveal Effect
-24. Scroll back to top
-25. Contact Form
-26. Skills circle
-
-------------------------------------------------------------------- */
-
 (function () {
     'use strict';
     var wind = $(window);
@@ -499,7 +466,7 @@
         message.text(response);
         setTimeout(function () {
             message.fadeOut();
-        }, 2000);
+        }, 4000);
         form.find('input:not([type="submit"]), textarea').val('');
     }
     // fail function
@@ -508,7 +475,7 @@
         message.text(data.responseText);
         setTimeout(function () {
             message.fadeOut();
-        }, 2000);
+        }, 4000);
     }
     form.submit(function (e) {
         e.preventDefault();
