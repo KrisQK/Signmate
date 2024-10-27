@@ -37,7 +37,7 @@ func main() {
 	Database()
 
 	r.GET("/", func(c *gin.Context) {
-		c.Redirect(200, "/index.html")
+		c.Redirect(301, "/index.html")
 	})
 
 	r.GET("/index.html", func(c *gin.Context) {
@@ -54,6 +54,30 @@ func main() {
 
 	r.GET("/services.html", func(c *gin.Context) {
 		c.HTML(200, "services.html", gin.H{
+			"testimonial": testimonial,
+		})
+	})
+
+	r.GET("/services-car.html", func(c *gin.Context) {
+		c.HTML(200, "services-car.html", gin.H{
+			"testimonial": testimonial,
+		})
+	})
+
+	r.GET("/services-shop.html", func(c *gin.Context) {
+		c.HTML(200, "services-shop.html", gin.H{
+			"testimonial": testimonial,
+		})
+	})
+
+	r.GET("/services-signage.html", func(c *gin.Context) {
+		c.HTML(200, "services-signage.html", gin.H{
+			"testimonial": testimonial,
+		})
+	})
+
+	r.GET("/services-printing.html", func(c *gin.Context) {
+		c.HTML(200, "services-printing.html", gin.H{
 			"testimonial": testimonial,
 		})
 	})
@@ -122,7 +146,7 @@ func main() {
 		c.HTML(404, "404.html", gin.H{})
 	})
 
-	r.Run("0.0.0.0:8880")
+	r.Run("0.0.0.0:80")
 }
 
 func Template() {
