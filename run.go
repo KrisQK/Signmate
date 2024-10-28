@@ -59,31 +59,23 @@ func main() {
 	})
 
 	r.GET("/services-car.html", func(c *gin.Context) {
-		c.HTML(200, "services-car.html", gin.H{
-			"testimonial": testimonial,
-		})
+		c.HTML(200, "services-car.html", gin.H{})
 	})
 
 	r.GET("/services-shop.html", func(c *gin.Context) {
-		c.HTML(200, "services-shop.html", gin.H{
-			"testimonial": testimonial,
-		})
+		c.HTML(200, "services-shop.html", gin.H{})
 	})
 
 	r.GET("/services-signage.html", func(c *gin.Context) {
-		c.HTML(200, "services-signage.html", gin.H{
-			"testimonial": testimonial,
-		})
+		c.HTML(200, "services-signage.html", gin.H{})
 	})
 
 	r.GET("/services-printing.html", func(c *gin.Context) {
-		c.HTML(200, "services-printing.html", gin.H{
-			"testimonial": testimonial,
-		})
+		c.HTML(200, "services-printing.html", gin.H{})
 	})
 
 	r.GET("/gallery.html", func(c *gin.Context) {
-		c.JSON(200, gin.H{"1": "未完成"})
+		c.HTML(200, "gallery.html", gin.H{})
 	})
 
 	r.GET("/contact.html", func(c *gin.Context) {

@@ -16,7 +16,7 @@
     $("#preloader").fadeOut(500);
     $(".preloader-bg").delay(500).fadeOut(500);
     var wind = $(window);
-    
+
     // Navbar scrolling background
     wind.on("scroll", function () {
         var bodyScroll = wind.scrollTop(),
@@ -35,7 +35,7 @@
     $(".navbar-nav .dropdown-item a").on('click', function () {
         $(".navbar-collapse").removeClass("show");
     });
-    
+
     // Sections background image from data background
     var pageSection = $(".bg-img, section");
     pageSection.each(function (indx) {
@@ -43,7 +43,7 @@
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
-    
+
     // Slider-Fade owlCarousel
     var owl = $('.header .owl-carousel');
     $('.slider-fade .owl-carousel').owlCarousel({
@@ -72,7 +72,7 @@
         $('.owl-item').not('.cloned').eq(item).find('.btn-1').addClass('animated fadeInUp');
         $('.owl-item').not('.cloned').eq(item).find('.btn-2').addClass('animated fadeInUp');
     });
-    
+
     // Works owlCarousel
     $('.works .owl-carousel').owlCarousel({
         loop: true,
@@ -98,7 +98,7 @@
             }
         }
     });
-    
+
     // Services owlCarousel
     $('.services .owl-carousel').owlCarousel({
         loop: true,
@@ -123,7 +123,7 @@
             }
         }
     });
-    
+
     // Gallery owlCarousel
     $('.gallery .owl-carousel').owlCarousel({
         loop: true
@@ -138,7 +138,8 @@
         , responsive: {
             0: {
                 items: 3
-            , }
+                ,
+            }
             , 600: {
                 items: 4
             }
@@ -146,8 +147,8 @@
                 items: 5
             }
         }
-    }); 
-    
+    });
+
     // Blog owlCarousel 
     $('.blog-home .owl-carousel').owlCarousel({
         loop: true
@@ -158,13 +159,14 @@
         , dots: true
         , nav: false
         , navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>']
-        , autoplayHoverPause:true
+        , autoplayHoverPause: true
         , responsiveClass: true
         , responsive: {
             0: {
                 items: 1,
                 dots: true
-            , }
+                ,
+            }
             , 600: {
                 items: 2,
                 dots: true
@@ -174,7 +176,7 @@
             }
         }
     });
-    
+
     // Team owlCarousel
     $('.team .owl-carousel').owlCarousel({
         loop: true
@@ -185,13 +187,14 @@
         , dots: true
         , nav: false
         , navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>']
-        , autoplayHoverPause:true
+        , autoplayHoverPause: true
         , responsiveClass: true
         , responsive: {
             0: {
                 items: 1,
                 nav: false
-            , }
+                ,
+            }
             , 600: {
                 items: 2,
                 nav: false
@@ -201,7 +204,7 @@
             }
         }
     });
-    
+
     // Clients owlCarousel
     $('.clients .owl-carousel').owlCarousel({
         loop: true
@@ -226,31 +229,31 @@
             }
         }
     });
-    
+
     // Testimonials owlCarousel
     $('.testimonials .owl-carousel').owlCarousel({
-        loop:true,
+        loop: true,
         margin: 30,
-        mouseDrag:true,
+        mouseDrag: true,
         autoplay: false,
         autoplayTimeout: 7000,
         dots: true,
         nav: false,
         navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
-        responsiveClass:true,
-        responsive:{
-            0:{
+        responsiveClass: true,
+        responsive: {
+            0: {
                 items: 1,
             },
-            600:{
+            600: {
                 items: 1,
             },
-            1000:{
+            1000: {
                 items: 2,
             }
         }
-    }); 
-    
+    });
+
     // Magnific Popup
     $(".img-zoom").magnificPopup({
         type: "image",
@@ -270,29 +273,29 @@
         preloader: false,
         fixedContentPos: false
     });
-    
+
     // Accordion
     if ($(".accordion-box").length) {
         $(".accordion-box").on("click", ".acc-btn", function () {
-          var outerBox = $(this).parents(".accordion-box");
-          var target = $(this).parents(".accordion");
+            var outerBox = $(this).parents(".accordion-box");
+            var target = $(this).parents(".accordion");
 
-          if ($(this).next(".acc-content").is(":visible")) {
-            //return false;
-            $(this).removeClass("active");
-            $(this).next(".acc-content").slideUp(300);
-            $(outerBox).children(".accordion").removeClass("active-block");
-          } else {
-            $(outerBox).find(".accordion .acc-btn").removeClass("active");
-            $(this).addClass("active");
-            $(outerBox).children(".accordion").removeClass("active-block");
-            $(outerBox).find(".accordion").children(".acc-content").slideUp(300);
-            target.addClass("active-block");
-            $(this).next(".acc-content").slideDown(300);
-          }
+            if ($(this).next(".acc-content").is(":visible")) {
+                //return false;
+                $(this).removeClass("active");
+                $(this).next(".acc-content").slideUp(300);
+                $(outerBox).children(".accordion").removeClass("active-block");
+            } else {
+                $(outerBox).find(".accordion .acc-btn").removeClass("active");
+                $(this).addClass("active");
+                $(outerBox).children(".accordion").removeClass("active-block");
+                $(outerBox).find(".accordion").children(".acc-content").slideUp(300);
+                target.addClass("active-block");
+                $(this).next(".acc-content").slideDown(300);
+            }
         });
-      }
-    
+    }
+
     // Isotope Active Masonry Gallery
     $('.gallery-items').imagesLoaded(function () {
         // Add isotope on click filter function
@@ -315,7 +318,7 @@
             layoutMode: 'masonry',
         });
     });
-    
+
     // Animations
     var contentWayPoint = function () {
         var i = 0;
@@ -349,39 +352,39 @@
     $(function () {
         contentWayPoint();
     });
-    
+
     // YouTubePopUp
     $("a.vid").YouTubePopUp();
-    
+
     // Parallaxie
     $('.parallaxie').parallaxie({
         speed: 0.2,
         size: "cover"
     });
-    
+
     // Tooltip   
     $('[data-tooltip-tit]').hover(function () {
         $('<div class="div-tooltip-tit"></div>').text($(this).attr('data-tooltip-tit')).appendTo('body').fadeIn('slow');
     }, function () {
-    $('.div-tooltip-tit').remove();
+        $('.div-tooltip-tit').remove();
     }).mousemove(function (e) {
-        $('.div-tooltip-tit').css({ top: e.pageY + 10, left: e.pageX + 20 })
+        $('.div-tooltip-tit').css({top: e.pageY + 10, left: e.pageX + 20})
     });
     $('[data-tooltip-sub]').hover(function () {
         $('<div class="div-tooltip-sub"></div>').text($(this).attr('data-tooltip-sub')).appendTo('body').fadeIn('slow');
     }, function () {
-    $('.div-tooltip-sub').remove();
+        $('.div-tooltip-sub').remove();
     }).mousemove(function (e) {
-        $('.div-tooltip-sub').css({ top: e.pageY + 60, left: e.pageX + 20 })
+        $('.div-tooltip-sub').css({top: e.pageY + 60, left: e.pageX + 20})
     });
-    
+
     // Wow Animated 
     var wow = new WOW({
         animateClass: 'animated',
         offset: 100
     });
     wow.init();
-    
+
     // Splitting Text
     $(window).on("load", function () {
         Splitting();
@@ -389,39 +392,42 @@
 
     // Reveal Effect
     var scroll = window.requestAnimationFrame
-    ||
-    // IE Fallback
-    function (callback) {
-      window.setTimeout(callback, 3000)
-    };
+        ||
+        // IE Fallback
+        function (callback) {
+            window.setTimeout(callback, 3000)
+        };
     var elementsToShow = document.querySelectorAll('.reveal-effect');
+
     function loop() {
-    Array.prototype.forEach.call(elementsToShow, function (element) {
-      if (isElementInViewport(element)) {
-        element.classList.add('animated');
-      }
-    });
-    scroll(loop);
-  }
+        Array.prototype.forEach.call(elementsToShow, function (element) {
+            if (isElementInViewport(element)) {
+                element.classList.add('animated');
+            }
+        });
+        scroll(loop);
+    }
+
     // Call the loop for the first time
     loop();
+
     // Helper function from: http://stackoverflow.com/a/7557433/274826
     function isElementInViewport(el) {
-    // special bonus for those using jQuery
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-      el = el[0];
+        // special bonus for those using jQuery
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
+        }
+        var rect = el.getBoundingClientRect();
+        return (
+            (rect.top <= 0
+                && rect.bottom >= 0)
+            || (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)
+                && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+            || (rect.top >= 0
+                && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+        );
     }
-    var rect = el.getBoundingClientRect();
-    return (
-      (rect.top <= 0
-        && rect.bottom >= 0)
-      || (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)
-        && rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-      || (rect.top >= 0
-        && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    );
-  }
-    
+
     // Scroll back to top
     var progressPath = document.querySelector('.progress-wrap path');
     var pathLength = progressPath.getTotalLength();
@@ -453,13 +459,14 @@
             scrollTop: 0
         }, duration);
         return false;
-    }) 
-    
+    })
+
 
     // Contact Form
     var form = $('.contact__form'),
         message = $('.contact__msg'),
         form_data;
+
     // success function
     function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
@@ -469,6 +476,7 @@
         }, 4000);
         form.find('input:not([type="submit"]), textarea').val('');
     }
+
     // fail function
     function fail_func(data) {
         message.fadeIn().removeClass('alert-success').addClass('alert-success');
@@ -477,6 +485,7 @@
             message.fadeOut();
         }, 4000);
     }
+
     form.submit(function (e) {
         e.preventDefault();
         form_data = $(this).serialize();
@@ -485,10 +494,10 @@
             url: form.attr('action'),
             data: form_data
         })
-        .done(done_func)
-        .fail(fail_func);
+            .done(done_func)
+            .fail(fail_func);
     });
-    
+
     // Skills circle
     var c4 = $('.skills-circle .skill');
     var myVal = $(this).attr('data-value');
@@ -498,7 +507,7 @@
             value: myVal,
             thickness: 4,
             size: 140,
-            fill: { color: "#ff5e57" }
+            fill: {color: "#ff5e57"}
         });
     });
     wind.on('scroll', function () {
@@ -515,5 +524,5 @@
             }
         });
     });
- 
+
 }());
