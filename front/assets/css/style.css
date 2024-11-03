@@ -3366,7 +3366,7 @@ ul.disc.disc li:before {
     position: relative;
     display: block;
     padding: 45px;
-    background: #1b1b1b;
+    background-color: #f5eb29;
     border-radius: 0px;
     margin-top: -225px;
     z-index: 9;
@@ -3398,6 +3398,7 @@ ul.disc.disc li:before {
     line-height: 60px;
     color: #1b1b1b;
     margin-bottom: 5px;
+    border: 2px;
 }
 
 .sidebar .services ul li:before {
@@ -3433,7 +3434,7 @@ ul.disc.disc li:before {
     display: block;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #1b1b1b;
     transition: all 0.3s ease;
     z-index: 1;
 }
@@ -4016,7 +4017,7 @@ ul.disc.disc li:before {
 /* ======= Clients style ======= */
 .clients {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     height: 100px;
     margin-top: -110px;
 }
