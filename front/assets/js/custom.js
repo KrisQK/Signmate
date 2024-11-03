@@ -49,7 +49,7 @@
     $('.slider-fade .owl-carousel').owlCarousel({
         items: 1,
         loop: true,
-        dots: true,
+        dots: false,
         margin: 0,
         mouseDrag: true,
         autoplay: true,

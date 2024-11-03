@@ -7,6 +7,7 @@ import (
 	"github.com/glebarez/sqlite"
 	"gorm.io/gorm"
 	"io/fs"
+	"os"
 	"path/filepath"
 	"strings"
 )
@@ -19,6 +20,11 @@ type User struct {
 	Username string `gorm:"type:varchar(64);not null"`
 	Password string `gorm:"type:varchar(64);not null"`
 	Token    string `gorm:"type:varchar(64)"`
+}
+
+type image struct {
+	Url      string
+	Category string
 }
 
 var testimonial = map[string]string{
@@ -75,7 +81,44 @@ func main() {
 	})
 
 	r.GET("/gallery.html", func(c *gin.Context) {
-		c.HTML(200, "gallery.html", gin.H{})
+
+		category := make([]string, 0)
+		var images []image
+
+		dirs, err := os.ReadDir("./front/assets/gallery")
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		for _, file := range dirs {
+			if file.IsDir() {
+				category = append(category, file.Name())
+			}
+		}
+
+		for _, c := range category {
+			entry, err := os.ReadDir(filepath.Join("./front/assets/gallery", c))
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+
+			for _, e := range entry {
+				if !e.IsDir() {
+
+					images = append(images, image{
+						Url:      "assets/gallery/" + c + "/" + e.Name(),
+						Category: c,
+					})
+				}
+			}
+		}
+
+		c.HTML(200, "gallery.html", gin.H{
+			"category": category,
+			"images":   images,
+		})
 	})
 
 	r.GET("/contact.html", func(c *gin.Context) {
@@ -90,48 +133,6 @@ func main() {
 		message := c.PostForm("message")
 		fmt.Println(name, email, phone, subject, message)
 		c.String(200, "Submit Success! We will contact u soon!")
-	})
-
-	r.GET("/project", func(c *gin.Context) {
-		var names []string
-		root := "front/dynamic"
-		filepath.Walk(root, func(path string, info fs.FileInfo, err error) error {
-			if err != nil {
-				return err
-			}
-
-			if path == root {
-				return nil
-			}
-
-			if info.IsDir() {
-				names = append(names, info.Name())
-			}
-
-			return nil
-		})
-
-		c.JSON(200, gin.H{"names": names})
-	})
-
-	r.GET("/project/:name", func(c *gin.Context) {
-		var paths []string
-		root := "front/dynamic/" + c.Param("name")
-		filepath.Walk(root, func(path string, info fs.FileInfo, err error) error {
-			if err != nil {
-				return err
-			}
-
-			if path == root {
-				return nil
-			}
-
-			paths = append(paths, path)
-
-			return nil
-		})
-
-		c.JSON(200, gin.H{"paths": paths})
 	})
 
 	r.NoRoute(func(c *gin.Context) {

@@ -180,7 +180,7 @@ textarea {
     margin-bottom: 15px;
     padding: 15px;
     height: auto;
-    background-color: #1b1b1b;
+    background-color: white;
     -webkit-box-shadow: none;
     box-shadow: none;
     display: block;
@@ -189,7 +189,7 @@ textarea {
     font-family: 'Hind', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #1b1b1b;
     background-image: none;
     border: 2px solid #1b1b1b;
     border-radius: 0px;
@@ -3229,7 +3229,7 @@ ul.disc.disc li:before {
 }
 
 .services .item {
-    background: #f1cb0b;;
+    background: #f5eb29;;
     padding: 60px 40px;
     -webkit-transition: .5s;
     transition: .5s;
@@ -3260,15 +3260,15 @@ ul.disc.disc li:before {
 
 .services .item h5 {
     font-size: 24px;
-    color: #000000;
+    color: #1b1b1b;
 }
 
 .services .item.active h5 {
-    color: #000000;
+    color: #1b1b1b;
 }
 
 .services .item:hover h5 {
-    color: #000000;
+    color: #1b1b1b;
     -webkit-transition: .5s;
     transition: .5s;
 }
@@ -3804,12 +3804,12 @@ ul.disc.disc li:before {
 /* ======= Accordion Box (for Faqs) style ======= */
 .accordion-box {
     position: relative;
-    padding: 0px;
+    padding: 0;
 }
 
 .accordion-box .block {
     position: relative;
-    background: #f1cb0d;
+    background: #f5eb29;
     overflow: hidden;
     margin-bottom: 15px;
 }
@@ -3829,7 +3829,7 @@ ul.disc.disc li:before {
     cursor: pointer;
     padding: 30px;
     padding-right: 60px;
-    color: #000000;
+    color: #1b1b1b;
     transition: all 500ms ease;
     font-family: 'Poppins', sans-serif;
 }
@@ -3843,7 +3843,7 @@ ul.disc.disc li:before {
 }
 
 .accordion-box .block .acc-btn.active .count {
-    color: #000000;
+    color: #1b1b1b;
 }
 
 .accordion-box .block .acc-btn:before {
@@ -3862,11 +3862,11 @@ ul.disc.disc li:before {
 
 .accordion-box .block .acc-btn.active {
     background-color: #dc2751;
-    color: #000000;
+    color: #1b1b1b;
 }
 
 .accordion-box .block .acc-btn.active:before {
-    color: #000000;
+    color: #1b1b1b;
     font-family: "Font Awesome 6 Pro";
     content: "\f106";
 }
@@ -3891,7 +3891,7 @@ ul.disc.disc li:before {
     display: block;
     position: relative;
     top: 0px;
-    color: #000000;
+    color: #1b1b1b;
 }
 
 
@@ -3946,12 +3946,12 @@ ul.disc.disc li:before {
 /* ======= Testimonials style ======= */
 .testimonials {
     position: relative;
-    background-color: #f1cb0d;
+    background-color: #f5eb29;
 }
 
 .testimonials .item {
     position: relative;
-    background: #1b1b1b;
+    background: white;
     padding: 45px 30px;
     border-radius: 0px;
     margin-bottom: 30px;
@@ -3965,7 +3965,7 @@ ul.disc.disc li:before {
 }
 
 .testimonials .item p {
-    color: #ccc;
+    color: black;
 }
 
 .testimonials .item .info {
@@ -4000,7 +4000,7 @@ ul.disc.disc li:before {
     padding-top: 15px;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: #ccc;
     line-height: 1.2em;
     text-transform: none;
     letter-spacing: 0px;
@@ -4017,6 +4017,8 @@ ul.disc.disc li:before {
 .clients {
     position: relative;
     overflow: hidden;
+    height: 100px;
+    margin-top: -110px;
 }
 
 .clients .clients-logo {
