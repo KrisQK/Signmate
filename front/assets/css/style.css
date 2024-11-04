@@ -296,7 +296,7 @@ input[type="checkbox"] {
 .v-middle {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 45%;
     left: 0;
     -webkit-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
@@ -3229,7 +3229,7 @@ ul.disc.disc li:before {
 }
 
 .services .item {
-    background: #f5eb29;;
+    background: #f5eb29;
     padding: 60px 40px;
     -webkit-transition: .5s;
     transition: .5s;
@@ -3242,6 +3242,10 @@ ul.disc.disc li:before {
     transition: background-color 300ms ease, transform 300ms ease, color 300ms ease;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
+}
+
+.services .item2{
+    background: #f58220;
 }
 
 .services .item.active {
@@ -4031,6 +4035,7 @@ ul.disc.disc li:before {
     overflow: hidden;
     border-radius: 5px;
     background: #f0f0f3;
+    object-fit: cover;
 }
 
 .clients .clients-logo:hover {
