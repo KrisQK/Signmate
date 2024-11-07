@@ -139,7 +139,7 @@ func main() {
 		c.HTML(404, "404.html", gin.H{})
 	})
 
-	r.Run("0.0.0.0:80")
+	r.Run("0.0.0.0:8880")
 }
 
 func Template() {
