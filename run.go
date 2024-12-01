@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/glebarez/sqlite"
+	"github.com/google/uuid"
 	"gorm.io/gorm"
 	"io/fs"
 	"os"
@@ -133,6 +134,99 @@ func main() {
 		message := c.PostForm("message")
 		fmt.Println(name, email, phone, subject, message)
 		c.String(200, "Submit Success! We will contact u soon!")
+	})
+
+	r.GET("/login", func(c *gin.Context) {
+		c.HTML(200, "admin/login.html", gin.H{})
+	})
+
+	r.POST("/login", func(c *gin.Context) {
+		username := c.PostForm("username")
+		password := c.PostForm("password")
+
+		var user User
+		db.First(&user, "username = ?", username)
+		if user.ID == 0 {
+			c.HTML(400, "admin/login.html", gin.H{"error": "用户不存在！"})
+		} else if password == user.Password {
+			token := uuid.NewString()
+
+			res := db.Model(user).Update("token", token)
+
+			if res.Error == nil {
+				c.SetCookie("Auth", token, 3600, "/", "", false, false)
+				c.HTML(200, "admin/login.html", gin.H{"success": "登录成功！"})
+			} else {
+				c.HTML(500, "admin/login.html", gin.H{"error": res.Error.Error()})
+			}
+		} else {
+			c.HTML(400, "admin/login.html", gin.H{"error": "用户名或密码错误"})
+		}
+	})
+
+	adminGroup := r.Group("/admin").Use(AuthMid())
+	adminGroup.GET("/gallery", func(c *gin.Context) {
+		c.String(200, "admin.callery")
+	})
+
+	adminGroup.GET("/api/gallery", func(c *gin.Context) {
+		category := make([]string, 0)
+		var images []image
+
+		dirs, err := os.ReadDir("./front/assets/gallery")
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		for _, file := range dirs {
+			if file.IsDir() {
+				category = append(category, file.Name())
+			}
+		}
+
+		for _, c := range category {
+			entry, err := os.ReadDir(filepath.Join("./front/assets/gallery", c))
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+
+			for _, e := range entry {
+				if !e.IsDir() {
+
+					images = append(images, image{
+						Url:      "assets/gallery/" + c + "/" + e.Name(),
+						Category: c,
+					})
+				}
+			}
+		}
+
+		c.JSON(200, gin.H{
+			"category": category,
+			"images":   images,
+		})
+	})
+
+	adminGroup.POST("/api/gallery/category", func(c *gin.Context) {
+		name := c.Param("name")
+		if strings.Contains(name, ".") {
+			c.JSON(200, gin.H{"msg": "no way"})
+			return
+		}
+		err := os.MkdirAll("./front/assets/gallery/"+name, 0750)
+		c.JSON(200, gin.H{"msg": "ok", "error": err.Error()})
+	})
+
+	adminGroup.POST("/delete/gallery/category", func(c *gin.Context) {
+		name := c.Param("name")
+		if strings.Contains(name, ".") {
+			c.JSON(200, gin.H{"msg": "no way"})
+			return
+		}
+		err := os.RemoveAll("./front/assets/gallery/" + name)
+		c.JSON(200, gin.H{"msg": "ok", "error": err.Error()})
 	})
 
 	r.NoRoute(func(c *gin.Context) {
