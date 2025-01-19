@@ -14,15 +14,15 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
 
-                        {{ range $k,$v := .testimonial }}
+                        {{ range $k,$v := .imonials }}
 
                             <div class="item"><span class="quote"><i class="fa-solid fa-ditto"></i></span>
-                                <p>{{ $v }}</p>
+                                <p>{{ $v.Word }}</p>
                                 <div class="info">
                                     <!-- <div class="author-img img-grayscale"> <img src="assets/images/team/02.jpg" alt=""> </div> -->
                                     <!--<div class="cont"> -->
                                     <!--<h6></h6> <span></span> -->
-                                    <h6>{{ $k }} </h6>
+                                    <h6>{{ $v.User }} </h6>
                                     <!--</div> -->
                                 </div>
                             </div>

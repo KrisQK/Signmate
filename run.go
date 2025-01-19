@@ -28,13 +28,9 @@ type image struct {
 	Category string
 }
 
-var testimonial = map[string]string{
-	"Bill Danson":   "Jackie has been absolutely great. Very accommodating and a pleasure to deal with. Will be back here the next time for sure. I want to have another car wrapping for my new Ford. Great job guys!",
-	"Blank Richard": "Thanks Jackie for the awesome LED lightbox. Your great communication and attention to service are truely hard to come by these days. My partner really happy with that. Thanks sooo much I will definately be comming back for other signages and car graphics.",
-	"Shannon Wood":  "Exceptional service. Provided great help and assistance in getting sizes correct for three of my vehicles. Also ensured a date deadline was met and provided excellent communication. Outstanding designer in every respect. Thank you.",
-	"Carl Madden":   "I was very pleased with the level of professional service I received from signmate limited, the quality of the graphics for my logo was creative and perfect for my company in attracting new customers. ",
-	"Tomma":         "Excellent Service! Definitely Highly Recommended... They did amzing vehicle graphic on my Holden. These guys are really frienly and professional. I had a good service, thank you Signmate!",
-	"Mr Dan":        " Signmate Limited helped me created a ideal image for my company store, through this change I have attracted new customers and in turn created more profit.",
+type Imonial struct {
+	User string
+	Word string
 }
 
 func main() {
@@ -48,20 +44,30 @@ func main() {
 	})
 
 	r.GET("/index.html", func(c *gin.Context) {
+
+		var imonials []Imonial
+		db.Limit(6).Order("RANDOM()").Find(&imonials)
+
 		c.HTML(200, "index.html", gin.H{
-			"testimonial": testimonial,
+			"imonials": imonials,
 		})
 	})
 
 	r.GET("/about.html", func(c *gin.Context) {
+		var imonials []Imonial
+		db.Limit(6).Order("RANDOM()").Find(&imonials)
+
 		c.HTML(200, "about.html", gin.H{
-			"testimonial": testimonial,
+			"imonials": imonials,
 		})
 	})
 
 	r.GET("/services.html", func(c *gin.Context) {
+		var imonials []Imonial
+		db.Limit(6).Order("RANDOM()").Find(&imonials)
+
 		c.HTML(200, "services.html", gin.H{
-			"testimonial": testimonial,
+			"imonials": imonials,
 		})
 	})
 
@@ -165,6 +171,11 @@ func main() {
 	})
 
 	adminGroup := r.Group("/admin").Use(AuthMid())
+
+	adminGroup.GET("/", func(c *gin.Context) {
+		c.HTML(200, "admin/home.html", gin.H{})
+	})
+
 	adminGroup.GET("/gallery", func(c *gin.Context) {
 		c.String(200, "admin.callery")
 	})
@@ -265,5 +276,20 @@ func Database() {
 	if res := db.First(&User{}); errors.Is(res.Error, gorm.ErrRecordNotFound) {
 		db.Create(&User{Username: "admin", Password: "123456"})
 		fmt.Println("Created admin account")
+	}
+
+	err = db.AutoMigrate(&Imonial{})
+	if err != nil {
+		panic("Failed to migrate database")
+	}
+
+	if res := db.First(&Imonial{}); errors.Is(res.Error, gorm.ErrRecordNotFound) {
+		db.Create(&Imonial{User: "Bill Danson", Word: "Jackie has been absolutely great. Very accommodating and a pleasure to deal with. Will be back here the next time for sure. I want to have another car wrapping for my new Ford. Great job guys!"})
+		db.Create(&Imonial{User: "Blank Richard", Word: "Thanks Jackie for the awesome LED lightbox. Your great communication and attention to service are truely hard to come by these days. My partner really happy with that. Thanks sooo much I will definately be comming back for other signages and car graphics."})
+		db.Create(&Imonial{User: "Shannon Wood", Word: "Exceptional service. Provided great help and assistance in getting sizes correct for three of my vehicles. Also ensured a date deadline was met and provided excellent communication. Outstanding designer in every respect. Thank you."})
+		db.Create(&Imonial{User: "Carl Madden", Word: "I was very pleased with the level of professional service I received from signmate limited, the quality of the graphics for my logo was creative and perfect for my company in attracting new customers."})
+		db.Create(&Imonial{User: "Tomma", Word: "Excellent Service! Definitely Highly Recommended... They did amzing vehicle graphic on my Holden. These guys are really frienly and professional. I had a good service, thank you Signmate!"})
+		db.Create(&Imonial{User: "Mr Dan", Word: "Signmate Limited helped me created a ideal image for my company store, through this change I have attracted new customers and in turn created more profit."})
+		fmt.Println("Created imonial")
 	}
 }
