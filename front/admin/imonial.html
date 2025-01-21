@@ -1,6 +1,31 @@
 {{ define "admin/imonial.html" }}
 
     {{ template  "admin/header" }}
+
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户</label>
+            <div class="layui-input-block">
+                <input type="text" name="user" lay-verify="required" placeholder="请输入" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">留言</label>
+            <div class="layui-input-block">
+                <textarea name="word" placeholder="请输入内容" lay-verify="required" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit lay-filter="demo1">添加</button>
+            </div>
+        </div>
+    </form>
+
+
     <!-- 原始容器 -->
     <table id="test" lay-filter="test"></table>
 
@@ -15,6 +40,8 @@
         layui.use(function () {
             var table = layui.table;
             var layer = layui.layer;
+            var form = layui.form;
+            var util = layui.util;
 
             // 已知数据渲染
             var inst = table.render({
@@ -32,15 +59,36 @@
                 console.log(obj.data); // 查看对象所有成员
 
                 if (obj.event === "delete") {
-                    layer.confirm('真的删除行 [id: ' + obj.data.ID + '] 么', function (index) {
-                        obj.del(); // 删除对应行（tr）的DOM结构
+                    layer.confirm('真的删除 [id: ' + obj.data.ID + '] 么', function (index) {
                         layer.close(index);
                         // 向服务端发送删除指令
-                         fetch('/admin/api/imonial/delete/'+obj.data.ID)
-                             .finally(table.reloadData(inst));
+                        fetch('/admin/api/imonial/delete/' + obj.data.ID).then(response => response.json())
+                            .then(data => layer.msg(data.msg))
+                            .catch(err => layer.msg(err))
+                            .finally(table.reloadData('test'));
                     });
                 }
 
+            });
+
+            // 提交事件
+            form.on('submit(demo1)', function (data) {
+                var field = data.field; // 获取表单字段值
+                console.log(field);
+
+                const formData = new FormData();
+                formData.append('user', field.user);
+                formData.append('word', field.word);
+
+                fetch('/admin/api/imonial/add', {
+                    method: 'POST',
+                    body: formData
+                }).then(response => response.json())
+                    .then(data => layer.msg(data.msg))
+                    .catch(err => layer.msg(err))
+                    .finally(table.reloadData('test'));
+
+                return false; // 阻止默认 form 跳转
             });
 
         });

@@ -198,7 +198,23 @@ func main() {
 
 		db.Delete(&Imonial{}, id)
 
-		c.JSON(200, gin.H{"msg": "OK"})
+		c.JSON(200, gin.H{"msg": "删除成功"})
+	})
+
+	adminGroup.POST("api/imonial/add", func(c *gin.Context) {
+
+		user := c.PostForm("user")
+		word := c.PostForm("word")
+		println(user, word)
+
+		if user == "" || word == "" {
+			c.JSON(200, gin.H{"msg": "参数错误"})
+			return
+		}
+
+		db.Create(&Imonial{User: user, Word: word})
+
+		c.JSON(200, gin.H{"msg": "添加成功"})
 	})
 
 	adminGroup.GET("/gallery", func(c *gin.Context) {
