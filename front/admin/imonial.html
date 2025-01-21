@@ -1,8 +1,51 @@
 {{ define "admin/imonial.html" }}
 
     {{ template  "admin/header" }}
+    <!-- 原始容器 -->
+    <table id="test" lay-filter="test"></table>
 
-    {{ .imonials }}
+    <!-- 工具栏模板 -->
+    <script type="text/html" id="toolbarDemo">
+        <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm" lay-event="delete">删除</button>
+        </div>
+    </script>
+
+    <script>
+        layui.use(function () {
+            var table = layui.table;
+            var layer = layui.layer;
+
+            // 已知数据渲染
+            var inst = table.render({
+                elem: '#test',
+                url: '/admin/api/imonial',
+                cols: [[ //标题栏
+                    {field: 'ID', title: 'ID', width: 80, sort: true},
+                    {field: 'User', title: '用户', width: 120, sort: true},
+                    {field: 'Word', title: '留言', minWidth: 160},
+                    {title: '操作', width: 85, align: 'center', toolbar: '#toolbarDemo'},
+                ]],
+            });
+
+            table.on('tool(test)', function (obj) {
+                console.log(obj.data); // 查看对象所有成员
+
+                if (obj.event === "delete") {
+                    layer.confirm('真的删除行 [id: ' + obj.data.ID + '] 么', function (index) {
+                        obj.del(); // 删除对应行（tr）的DOM结构
+                        layer.close(index);
+                        // 向服务端发送删除指令
+                         fetch('/admin/api/imonial/delete/'+obj.data.ID)
+                             .finally(table.reloadData(inst));
+                    });
+                }
+
+            });
+
+        });
+
+    </script>
 
     {{ template  "admin/footer" }}
 

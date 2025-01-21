@@ -178,15 +178,27 @@ func main() {
 	})
 
 	adminGroup.GET("/imonial", func(c *gin.Context) {
-		var imonials []Imonial
-
-		db.Find(&imonials)
-
-		c.HTML(200, "admin/imonial.html", gin.H{"imonials": imonials})
+		c.HTML(200, "admin/imonial.html", gin.H{})
 	})
 
 	adminGroup.GET("api/imonial", func(c *gin.Context) {
+		var imonials []Imonial
 
+		db.Find(&imonials)
+		c.JSON(200, gin.H{
+			"code":  0,
+			"msg":   "",
+			"count": len(imonials),
+			"data":  imonials,
+		})
+	})
+
+	adminGroup.GET("api/imonial/delete/:id", func(c *gin.Context) {
+		id := c.Param("id")
+
+		db.Delete(&Imonial{}, id)
+
+		c.JSON(200, gin.H{"msg": "OK"})
 	})
 
 	adminGroup.GET("/gallery", func(c *gin.Context) {
