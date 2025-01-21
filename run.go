@@ -29,6 +29,7 @@ type image struct {
 }
 
 type Imonial struct {
+	ID   uint `gorm:"primarykey"`
 	User string
 	Word string
 }
@@ -174,6 +175,18 @@ func main() {
 
 	adminGroup.GET("/", func(c *gin.Context) {
 		c.HTML(200, "admin/home.html", gin.H{})
+	})
+
+	adminGroup.GET("/imonial", func(c *gin.Context) {
+		var imonials []Imonial
+
+		db.Find(&imonials)
+
+		c.HTML(200, "admin/imonial.html", gin.H{"imonials": imonials})
+	})
+
+	adminGroup.GET("api/imonial", func(c *gin.Context) {
+
 	})
 
 	adminGroup.GET("/gallery", func(c *gin.Context) {
