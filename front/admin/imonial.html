@@ -25,7 +25,6 @@
         </div>
     </form>
 
-
     <!-- 原始容器 -->
     <table id="test" lay-filter="test"></table>
 
@@ -65,7 +64,7 @@
                         fetch('/admin/api/imonial/delete/' + obj.data.ID).then(response => response.json())
                             .then(data => layer.msg(data.msg))
                             .catch(err => layer.msg(err))
-                            .finally(table.reloadData('test'));
+                            .finally(obj.del());
                     });
                 }
 

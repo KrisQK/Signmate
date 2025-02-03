@@ -9,6 +9,7 @@ import (
 	"gorm.io/gorm"
 	"io/fs"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
 )
@@ -35,6 +36,14 @@ type Imonial struct {
 }
 
 func main() {
+
+	go func() {
+		err := exec.Command("./goFile.exe", "-path", "./front/assets/gallery", "-port", "8888").Run()
+		if err != nil {
+			fmt.Println(err)
+		}
+	}()
+
 	r = gin.Default()
 
 	Template()
