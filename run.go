@@ -38,7 +38,8 @@ type Imonial struct {
 func main() {
 
 	go func() {
-		err := exec.Command("./goFile.exe", "-path", "./front/assets/gallery", "-port", "6666").Run()
+		fmt.Println("启动GoFile")
+		err := exec.Command("./goFile.exe", "-path", "./front/assets/gallery", "-port", "8888").Run()
 		if err != nil {
 			fmt.Println(err)
 		}
