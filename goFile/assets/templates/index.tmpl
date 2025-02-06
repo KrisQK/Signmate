@@ -1,0 +1,208 @@
+<html>
+{{template "public/header" .}}
+<body>
+<h2><a href="/">goFile</a></h2>
+{{if .path}}
+<p>{{t "cd"}}:{{.path}}</p>
+{{end}}
+{{if .prev}}
+<a href="{{.prev}}">{{t "rl"}}</a>
+{{end}}
+{{$r := .reader}}
+<ul>
+    {{if .info.Dirs}}
+    <h3>{{t "dls"}}</h3>
+    {{$path := .path}}
+    {{range $item := .info.Dirs}}
+    <li class="c-b">
+        <a href="/d/{{$path}}{{.DirName}}">{{$item.DirName}}</a>
+        {{ if not $r }}
+        <span class="f-r"><a onclick="rm({{.DirPath}})">{{t "del"}}</a></span>
+        {{ end }}
+    </li>
+    {{end}}
+    {{end}}
+    {{if .info.Files}}
+    <h3>{{t "fls"}}</h3>
+    {{range $item := .info.Files}}
+    <li class="c-b">
+        <a target="_blank" href="/download/{{.FilePath}}">{{$item.FileName}}</a>
+        <span class="f-r"><a target="_blank" href="/view/{{.FilePath}}">{{t "view"}}</a></span>
+        {{ if not $r }}
+        <span class="f-r"><a onclick="edite({{.FilePath}})">{{t "edit"}}</a></span>
+        <span class="f-r"><a onclick="rm({{.FilePath}})">{{t "del"}}</a></span>
+        {{if .IsZip}}
+        <span class="f-r"><a onclick="unzip({{.FilePath}})">{{t "unzip"}}</a></span>
+        {{end}}
+        {{ end }}
+    </li>
+    {{end}}
+    {{end}}
+</ul>
+{{ if not $r }}
+<a href="#" onclick="createNewFile()">{{t "nFile"}}</a>
+<a href="#" onclick="createNewDir()">{{t "nDir"}}</a>
+<h3>{{t "cUpFile"}}</h3>
+<form id="uploadForm" action="/do/upload/{{.path}}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="fileInput">
+</form>
+<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    //拖放上传文件 start
+    // 获取 body 元素
+    const body = document.querySelector('body');
+
+    // 监听文件拖放事件
+    body.addEventListener('drop', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        // 获取拖放的文件
+        const file = event.dataTransfer.files[0];
+
+        // 判断拖放的元素是否为文件，如果是，则模拟表单提交
+        if (file) {
+            // 创建 form 元素
+            const form = document.createElement('form');
+            form.setAttribute('method', 'post');
+            form.setAttribute('enctype', 'multipart/form-data');
+            form.setAttribute('action', '/do/upload/{{.path}}');
+
+            // 创建 file input 元素
+            const fileInput = document.createElement('input');
+            fileInput.setAttribute('type', 'file');
+            fileInput.setAttribute('name', 'file');
+            fileInput.files = event.dataTransfer.files;
+
+            // 创建 submit input 元素
+            const submitInput = document.createElement('input');
+            submitInput.setAttribute('type', 'submit');
+            submitInput.setAttribute('value', '{{t "submit"}}');
+            // 添加元素到 form 中
+            form.appendChild(fileInput);
+            form.appendChild(submitInput);
+            // 添加 form 到 body 中
+            body.appendChild(form);
+            // 提交表单
+            form.submit();
+        }
+    });
+
+    // 防止浏览器默认行为
+    body.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+    //拖放上传文件 end
+    function createNewDir() {
+        const dirName = window.prompt("请输入文件夹名：");
+        if (dirName !== null) {
+            $.post("/do/newdir",{path:{{.path}},dirname:dirName},function(data,status){
+                if(status == "success"){
+                    if(data.stat){
+                        if(confirm("操作成功，点击确认刷新")){
+                            location.reload();
+                        }}else{
+                        alert("操作失败")
+                    }
+                }else{
+                    alert('{{t "reqFail"}}');
+                }
+            });
+        }
+    }
+    function createNewFile() {
+        const fileName = window.prompt("请输入文件名：");
+        if (fileName !== null) {
+            $.post("/do/newfile",{path:{{.path}},filename:fileName},function(data,status){
+                if(status == "success"){
+                    if(data.stat){
+                        if(confirm("操作成功，点击确认刷新")){
+                            location.reload();
+                        }}else{
+                        alert("操作失败，可能文件已存在")
+                    }
+                }else{
+                    alert('{{t "reqFail"}}');
+                }
+            });
+        }
+    }
+    function unzip($path){
+        if (confirm("你确定要解压"+$path+"吗？")){
+            $.post("/do/unzip",{path:$path},function(data,status){
+                if(status == "success"){
+                    if(data.stat){
+                        if(confirm("操作成功，点击确认刷新")){
+                            location.reload();
+                    }}else{
+                        alert("操作失败")
+                    }
+                }else{
+                    alert('{{t "reqFail"}}');
+                }
+            });
+        }
+    }
+    function rm($path){
+        if (confirm("你确定要删除"+$path+"吗？")){
+            $.post("/do/rm",{path:$path},function(data,status){
+                if(status == "success"){
+                    if(data.stat){
+                        if(confirm("操作成功，点击确认刷新")){
+                            location.reload();
+                        }}else{
+                        alert("操作失败")
+                    }
+                }else{
+                    alert('{{t "reqFail"}}');
+                }
+            });
+        }
+    }
+    function edite(path) {
+        var temp = document.createElement("form"); //创建form表单
+        temp.action = "/edite";
+        temp.method = "post";
+        temp.target = "_blank"
+        temp.style.display = "none";//表单样式为隐藏
+        var opt =document.createElement("input");  //添加input标签
+        opt.type="text";   //类型为text
+        opt.name = "path";    //设置name属性
+        opt.value = path;   //设置value属性
+        temp.appendChild(opt);
+        document.body.appendChild(temp);
+        temp.submit();
+        return temp;
+    }
+    document.getElementById('fileInput').addEventListener('change', function() {
+    if (this.files.length > 0) {
+        // 创建一个FormData对象
+        var formData = new FormData();
+        formData.append('file', this.files[0]);
+
+        // 创建一个XMLHttpRequest对象
+        var xhr = new XMLHttpRequest();
+
+        // 设置请求方法和上传文件的URL
+        xhr.open('POST', '/do/upload/{{.path}}', true);
+
+        // 设置请求完成的处理函数
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                alert('文件上传成功');
+                location.reload(); // 或者其他的逻辑，比如显示上传的文件
+            } else {
+                alert('文件上传失败');
+            }
+        };
+
+        // 发送FormData对象
+        xhr.send(formData);
+    }
+});
+
+</script>
+{{ end }}
+</body>
+</html>
