@@ -38,7 +38,7 @@ type Imonial struct {
 func main() {
 
 	go func() {
-		err := exec.Command("./goFile.exe", "-path", "./front/assets/gallery", "-port", "8888").Run()
+		err := exec.Command("./goFile.exe", "-path", "./front/assets/gallery", "-port", "6666").Run()
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -294,7 +294,7 @@ func main() {
 		c.HTML(404, "404.html", gin.H{})
 	})
 
-	r.Run("0.0.0.0:8880")
+	r.Run("0.0.0.0:80")
 }
 
 func Template() {
