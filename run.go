@@ -35,6 +35,22 @@ type Imonial struct {
 	Word string
 }
 
+type KV struct {
+	Key   string
+	Value string
+}
+
+var ViewTime int
+
+func ViewTimeMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		ViewTime += 1
+
+		// 处理请求
+		c.Next()
+	}
+}
+
 func main() {
 
 	go func() {
@@ -46,6 +62,7 @@ func main() {
 	}()
 
 	r = gin.Default()
+	r.Use(ViewTimeMiddleware())
 
 	Template()
 	Database()
@@ -184,7 +201,9 @@ func main() {
 	adminGroup := r.Group("/admin").Use(AuthMid())
 
 	adminGroup.GET("/", func(c *gin.Context) {
-		c.HTML(200, "admin/home.html", gin.H{})
+		c.HTML(200, "admin/home.html", gin.H{
+			"ViewTime": ViewTime,
+		})
 	})
 
 	adminGroup.GET("/imonial", func(c *gin.Context) {
@@ -342,5 +361,15 @@ func Database() {
 		db.Create(&Imonial{User: "Tomma", Word: "Excellent Service! Definitely Highly Recommended... They did amzing vehicle graphic on my Holden. These guys are really frienly and professional. I had a good service, thank you Signmate!"})
 		db.Create(&Imonial{User: "Mr Dan", Word: "Signmate Limited helped me created a ideal image for my company store, through this change I have attracted new customers and in turn created more profit."})
 		fmt.Println("Created imonial")
+	}
+
+	err = db.AutoMigrate(&KV{})
+	if err != nil {
+		panic("Failed to migrate database KV")
+	}
+
+	if res := db.First(&KV{Key: "Guard"}); errors.Is(res.Error, gorm.ErrRecordNotFound) {
+		db.Create(&KV{Key: "Guard", Value: ""})
+		fmt.Println("Created 内嵌代码")
 	}
 }
